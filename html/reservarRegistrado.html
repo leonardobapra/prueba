@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="../css/estilo.css">  
+    <title>Proyecto WEB - Reservar</title>
+    
+</head>
+<body>
+    <div id="contenedor">
+        <div id="header">
+            <img class="hotel" src="../imagenes/city-36593_1280.png"alt="">   
+            <div class="menu">
+                <div id="nav"> 
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="buscarRegistrado.html">Buscar</a></li>
+                        <li><a href="historalReservas.html">Mis Reserva</a></li>
+                        <li><a href="sitiosTuristicos.html">Sitios Turísticos</a></li>
+                        <li><a href="perfil.html">Mi Perfil</a></li>
+                        <li><a href="../inicio.html">Cerrar sesión</a></li>
+                        <li><img src="../imagenes/usuario.jpg" alt="Usuario" width="45px" height="45px"></li>
+                        <li><span>Nombre Usuario</span></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <div id="contenido">
+            <hr>
+            <center><h2><b>Mi Reserva</b></h2></center>
+            <div id="section">
+                <center>
+                    <form action="" name="frmMiReservaRegistrado">
+                        <p><h1>Haga su reserva de la habitacion en minutos</h1></p>
+                        <p>
+                            <label for="adults" class="field-label">Numeros de Adultos:
+                                <input type="number" id="adults" name="adults" class="gui-input" required="" placeholder="Numeros de Adultos">
+                            </label>                        
+                        </p>
+                        <p>
+                            <label for="children" class="field-label">Numero de Niños:
+                                <input type="number" id="children" name="children" class="gui-input" required="" placeholder="Numero de Niños">
+                            </label>                        
+                        </p>
+                        <p>
+                            <label for="checkin" class="field-label">Fecha de Entrada:
+                                <input type="text" id="checkin" name="checkin" class="gui-input" required="" placeholder="dd/mm/yyyy">
+                            </label>                        
+                        </p>
+                        <p>
+                            <label for="checkout" class="field-label">Fecha de Salida:
+                                <input type="text" id="checkout" name="checkout" class="gui-input" required="" placeholder="dd/mm/yyyy">                                
+                            </label>                        
+                        </p>
+                        
+                        <div class="tagline"><span>Por favor responda estas preguntas para una estadia placentera:</span></div>
+                        <p>
+                            ¿va a traer una Mascota?<br>
+                            <input type="radio" name="mascota" value="si">SI
+                            <input type="radio" name="mascota" value="no">NO
+                        </p>
+                        <p>
+                            ¿Necesita que lo recojamos?<br>
+                            <input type="radio" name="recoger" value="si">SI
+                            <input type="radio" name="recoger" value="no">NO
+                        </p>
+
+                        <p><label for="comment" class="field-label">¿Algo mas que debamos saber?</label></p>
+                        <textarea name="commentario" cols="35" rows="6" placeholder="Haganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
+                        <br>
+                        <strong>Por favor:</strong> sea lo mas descriptivo posible.
+                        <p>
+                            <button type="submit" class="button btn-primary">Confirmar Reserva</button>
+                            <button type="reset" class="button ">Cancelar</button>
+                        </p>                         
+                    </form>
+                </center>
+            </div>
+        </div>
+        <div id="footer">
+            <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+            <span>TODOS LOS DERECHOS RESERVADOS</span>
+        </div>
+    </div> 
+</body>
+</html>

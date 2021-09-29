@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Proyecto WEB - Buscar reserva</title>
+</head>
+<body>
+    <div id="contenedor">        
+        <div id="header">
+            <img class="hotel" src="../imagenes/city-36593_1280.png"alt="">   
+            <div class="menu">
+                <div id="nav"> 
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#">Buscar</a></li>
+                        <li><a href="perfil.html">Mi Perfil</a></li>
+                        <li><a href="historalReservas.html">Mis Reserva</a></li>
+                        <li><a href="sitiosTuristicos.html">Sitios Turísticos</a></li>
+                        <li><a href="../inicio.html">Cerrar sesión</a></li>
+                        <li><img src="../imagenes/usuario.jpg" alt="Usuario" width="45px" height="45px"></li>
+                        <li><span>Nombre Usuario</span></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        
+        <div id="contenido">
+            <hr>
+            <center><h2><b>Buscar reservación</b></h2></center>
+            <div id="busqueda">
+                <center>
+                    <form action="" name="frmBuscar">
+                        <p>
+                            <input type="text" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
+                            <img src="../imagenes/lupa.png" alt="" width="23px">
+                        
+                        </p>
+                        <p>
+                            <b>Filtro 1:</b>
+                            <select name="lstFiltro1" id="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>                            
+                        </p>
+                        <p>
+                            <b>Filtro 2:</b>
+                            <select name="lstFiltro2" id="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>                            
+                        </p>
+                        <p>
+                            <b>Filtro 3:</b>
+                            <select name="lstFiltro3" id="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>                            
+                        </p>
+                        <p>
+                            <b>Filtro 4:</b>
+                            <select name="lstFiltro4" id="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>                            
+                        </p>
+                        <p>
+                            <b>Filtro 5:</b>
+                            <select name="lstFiltro5" id="">
+                                <option value="">Seleccione una opción</option>
+                                <option value="opcion1">Opción 1</option>
+                                <option value="opcion2">Opción 2</option>
+                                <option value="opcion3">Opción 3</option>
+                            </select>                            
+                        </p>
+                        <p>
+                            <input type="submit" name="btnBuscar" value="Buscar">
+                        </p>                        
+                    </form>
+                </center>
+            </div>
+            <div id="resultados">
+                <hr>
+                <center><h2><b>Resultados</b></h2></center>    
+                <br>
+                <form action="reservarRegistrado.html">
+                    <b>Hotel:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Dirección:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Teléfono:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Estrellas:</b> &nbsp;&nbsp; # &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Tipo de habitaciön:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Habitaciön No.:</b> &nbsp;&nbsp; XXX <br>
+                    <b>Piso:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Capacidad:</b> &nbsp;&nbsp; ## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Minibar:</b> &nbsp;&nbsp; XX &nbsp;&nbsp;&nbsp;&nbsp;
+                    <b>Precio:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>
+                    <center><input type="submit" name="btnReservar" value="Reservar"></center>             
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+            <span>TODOS LOS DERECHOS RESERVADOS</span>
+        </div>
+    </div>
+</body>
+</html>

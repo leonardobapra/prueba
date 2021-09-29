@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Proyecto WEB - Registro</title>
+</head>
+<body>
+    <div id="contenedor">        
+        <div id="header">
+            <img class="hotel" src="../imagenes/city-36593_1280.png"alt="">   
+            <div class="menu">
+                <div id="nav"> 
+                    <ul>
+                        <li><a href="../inicio.html">Inicio</a></li>
+                        <li><a href="buscar.html">Buscar</a></li>
+                        <li><a href="ingreso.html">Ingresar</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div> 
+        <div id="contenido">
+            <hr>
+            <center><h2><b>Registro</b></h2></center>
+            <div id="section">
+                <center>
+                    <form action="index.html" name="frmRegistro">
+                        <p>
+                            <label>Documento de identidad: 
+                                <input type="number" name="txtDoc" id="">
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                Nombres: 
+                                <input type="text" name="txtNombre" id="">
+                            </label>
+                        </p>
+                        <p>
+                            <label>Apellidos: 
+                                <input type="text" name="txtApels" id="">
+                            </label>
+                        </p>
+                        <p>
+                            <label>Correo: 
+                                <input type="email" name="txtCorreo" id="" placeholder="ejemplo@mail.com">
+                            </label>
+                        </p>
+                        <p>
+                            <label>Contraseña: 
+                                <input type="password" name="txtPassword1" id="" placeholder="Contraseña">
+                            </label>
+                        </p>
+                        <p>
+                            <label>Confirmar contraseña: 
+                                <input type="password" name="txtPassword2" id="" placeholder="Confirmar Contraseña">
+                            </label>
+                        </p>
+                        <p>
+                            <input type="reset" name="" id="" value="Cancelar">
+                            <input type="submit" name="btnIngresar" value="Registrar">
+                        </p>                        
+                    </form>
+                </center>
+            </div>
+        </div>
+        <div id="footer">
+            <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+            <span>TODOS LOS DERECHOS RESERVADOS</span>
+        </div>
+    </div>
+</body>
+</html>
