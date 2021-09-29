@@ -5,29 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Proyecto WEB - Sitios Turísticos</title>
 </head>
 <body>
-    <div id="contenido">
-        <div id="header">
-            <img class="hotel" src="../imagenes/city-36593_1280.png"alt="">   
-            <div class="menu">
-                <div id="nav"> 
+    <div class="container-fluid m-0 p-0" id="contenedor">
+        <header class="p-1" id="header">
+            <div class="row g-0" class="hotel">
+                <div class="col-1 nav-item ms-5" class="menu">
+                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+                </div>
+                <div class="col-9 nav justify-content-end d-flex align-items-center" id="nav">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="buscarRegistrado.html">Buscar</a></li>
-                        <li><a href="perfil.html">Mi Perfil</a></li>
                         <li><a href="historalReservas.html">Mis Reserva</a></li>
-                        <li><a href="#">Sitios Turísticos</a></li>
+                        <li><a href="perfil.html">Mi Perfil</a></li>
                         <li><a href="../inicio.html">Cerrar sesión</a></li>
-                        <li><img src="../imagenes/usuario.jpg" alt="Usuario" width="45px" height="45px"></li>
-                        <li><span>Nombre Usuario</span></li>
                     </ul>
-                </div> 
+                </div>
+                <div class="col-1 nav justify-content-end d-flex align-items-center" id="nav">
+                    <ul class="nav justify-content-center d-flex align-items-center">
+                        <li><img src="../imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px"></li>
+                        <li><span>Usuario</span></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </header>
+
         <div id="">
-            <hr>
+            <hr class="m-0">
+            <br>
             <div id="article">
                 <p><h2><b>Catedral Metropolitana de la Sagrada Familia</b></h2></p>
                 <img src="../imagenes/catedralSagradaFlia.jpg" width="18%" height="18%" alt="Catedral Metropolitana de la Sagrada Familia">
@@ -85,9 +93,13 @@
                 </p>                
             </div>
         </div>
-        <div id="footer">
-            <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
-            <span>TODOS LOS DERECHOS RESERVADOS</span>
+        <br>
+        <div id="footer" class="container-fluid">
+            <hr class="m-0">
+            <footer class="text-center p-1 m-0">
+                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span>TODOS LOS DERECHOS RESERVADOS</span>
+            </footer>
         </div>
     </div>
 </body>

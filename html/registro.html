@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Proyecto WEB - Registro</title>
 </head>
 <body>
-    <div id="contenedor">        
-        <div id="header">
-            <img class="hotel" src="../imagenes/city-36593_1280.png"alt="">   
-            <div class="menu">
-                <div id="nav"> 
+    <div class="container-fluid m-0 p-0" id="contenedor">
+        <header class="p-1" id="header">
+            <div class="row" class="hotel">
+                <div class="col-3 nav-item ms-5" class="menu">
+                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+                </div>
+                <div class="col-8 nav justify-content-end d-flex align-items-center" id="nav">
                     <ul>
                         <li><a href="../inicio.html">Inicio</a></li>
                         <li><a href="buscar.html">Buscar</a></li>
                         <li><a href="ingreso.html">Ingresar</a></li>
-                        <li><a href="registro.html">Registrarse</a></li>
                     </ul>
-                </div> 
+                </div>
             </div>
-        </div> 
+        </header>
+
         <div id="contenido">
-            <hr>
+            <hr class="m-0">
+            <br>
             <center><h2><b>Registro</b></h2></center>
             <div id="section">
                 <center>
@@ -67,9 +71,13 @@
                 </center>
             </div>
         </div>
-        <div id="footer">
-            <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
-            <span>TODOS LOS DERECHOS RESERVADOS</span>
+        <br>
+        <div id="footer" class="container-fluid">
+            <hr class="m-0">
+            <footer class="text-center p-1 m-0">
+                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span>TODOS LOS DERECHOS RESERVADOS</span>
+            </footer>
         </div>
     </div>
 </body>
