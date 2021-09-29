@@ -22,7 +22,6 @@ body{
     width: 120px;
     height: 90px;
     float: left;
-    padding: 8px;
 }
 
 #header{
@@ -48,14 +47,14 @@ body{
     text-decoration: none;
     opacity: 100%;
     font-size: larger;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     color: black;
     font-weight: bold;
 }
 
 #nav ul li span{
     font-weight: bold;
-    font-size: larger;
+    font-size: medium;
     color: black;
 }
 
