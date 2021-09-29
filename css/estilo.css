@@ -41,7 +41,6 @@ body{
 #nav ul li{
     list-style: none;
     margin-left: 40px;
-    padding: 30px 0px;
     float: left;
 }
 
@@ -49,6 +48,7 @@ body{
     text-decoration: none;
     opacity: 100%;
     font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: black;
     font-weight: bold;
 }
