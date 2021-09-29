@@ -47,7 +47,7 @@ body{
     text-decoration: none;
     opacity: 100%;
     font-size: larger;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
     color: black;
     font-weight: bold;
 }
@@ -59,7 +59,7 @@ body{
 }
 
 #nav ul li a:hover{
-    color: gold;
+    color: rgb(100, 74, 192);
 }
 
 #footer{
