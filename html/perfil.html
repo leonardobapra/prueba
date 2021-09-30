@@ -33,39 +33,43 @@
             </div>
         </header>
 
-        <div id="contenido">
+        <div class="container" id="contenido">
             <hr class="m-0">
             <br>
-            <center><h2><b>Mi Perfil</b></h2></center>
-            <div id="section">
-                <center>
-                    <form action="" name="frmMiPerfil">
-                        <p>
-                            <label">Correo: 
-                                <input type="email" name="txtCorreo" id="" placeholder="ejemplo@mail.com"> 
-                            </label>
-                        </p>
+            <h2 class="text-center"><b>Mi Perfil</b></h2>
+            <div class="col m-1 p-3" id="section">
+                <form action="" name="frmMiPerfil">
+                    <div class="mb-3 text-center">
+                        <label>Correo electronico: 
+                            <input type="email" class="form-control shadow bg-body rounded border-primary" name="txtCorreo" id="" required="" placeholder="ejemplo@mail.com"> 
+                        </label>
+                    </div>
+                    <div class="mb-3 text-center">
                         <p>
                             <label>Contraseña Actual: 
-                                <input type="password" name="" id="" placeholder="Contraseña Actual">
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Contraseña Actual">
                             </label>
                         </p>
+                    </div>
+                    <div class="mb-3 text-center">
                         <p>
                             <label>Nueva Contraseña: 
-                                <input type="password" name="" id="" placeholder="Contraseña Nueva">
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Contraseña Nueva">
                             </label>
                         </p>
+                    </div>
+                    <div class="mb-3 text-center">
                         <p>
                             <label>Confirmar Nueva Contraseña: 
-                                <input type="password" name="" id="" placeholder="Confirmar Nueva Contraseña">
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Confirmar Nueva Contraseña">
                             </label>
                         </p>
-                        <p>
-                            <input type="reset" name="" id="" value="Cancelar">
-                            <input type="submit" name="btnActualizar" value="Actualizar">
-                        </p>     
-                    </form>
-                </center>
+                    </div>
+                    <div class="text-center">
+                        <input type="reset" class="btn btn-danger" name="" id="" value="Cancelar">
+                        <input type="submit" class="btn btn-primary" name="btnActualizar" value="Actualizar">                        
+                    </div>                     
+                </form>               
             </div>
         </div>
         <br>
