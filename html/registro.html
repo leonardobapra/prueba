@@ -25,52 +25,121 @@
             </div>
         </header>
 
-        <div id="contenido">
-            <hr class="m-0">
-            <br>
-            <center><h2><b>Registro</b></h2></center>
-            <div id="section">
-                <center>
-                    <form action="index.html" name="frmRegistro">
+<div class="container">
+    <hr class="m-0">
+    <br>
+    <h1 class="text-center"><b>REGISTRO</b></h1>
+    <h5 class="text-center p-4"><b>Llene todos los campos para realizar el registro:</b></h5>
+    <div class="section">
+        <form action="" class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="form-group col-6">
                         <p>
-                            <label>Documento de identidad: 
-                                <input type="number" name="txtDoc" id="">
-                            </label>
+                            <label for="" class="col-form-label">Ingrese sus Nombres y Apellidos:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ana María Rodriguez Perez" id="txtNombreApellido" name="txtNombreApellido">
                         </p>
+                    </div>
+                    <div class="form-group row col-6">
                         <p>
-                            <label>
-                                Nombres: 
-                                <input type="text" name="txtNombre" id="">
-                            </label>
+                            <label for="" class="col-form-label">Ingrese el número de su documento de identidad:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="0000000000" id="txtDoc" name="txtDoc" min="0000000000" max="9999999999">
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-6">
                         <p>
-                            <label>Apellidos: 
-                                <input type="text" name="txtApels" id="">
-                            </label>
+                            <label for="" class="col-form-label">Direccion de Correo Electronico:</label>
+                            <input type="email" class="form-control shadow bg-body rounded border-primary" required="" placeholder="ejemplo@gmail.com" id="email" name="email">
                         </p>
+                    </div>
+                    <div class="form-group col-6">
                         <p>
-                            <label>Correo: 
-                                <input type="email" name="txtCorreo" id="" placeholder="ejemplo@mail.com">
-                            </label>
+                            <label for="" class="col-form-label">Telefono / Celular:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Numero de telefono / Celular" id="phone" name="phone" min="0000000000" max="9999999999">
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-6">
                         <p>
-                            <label>Contraseña: 
-                                <input type="password" name="txtPassword1" id="" placeholder="Contraseña">
-                            </label>
+                            <label for="" class="col-form-label">Contraseña:</label>
+                            <input type="password" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ingrese contraseña" id="password1" name="password1">
                         </p>
+                    </div>
+                    <div class="form-group col-6">
                         <p>
-                            <label>Confirmar contraseña: 
-                                <input type="password" name="txtPassword2" id="" placeholder="Confirmar Contraseña">
-                            </label>
+                            <label for="" class="col-form-label">Confirmar contraseña:</label>
+                            <input type="password" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Confirme contraseña" id="password2" name="password2">
                         </p>
-                        <p>
-                            <input type="reset" name="" id="" value="Cancelar">
-                            <input type="submit" name="btnIngresar" value="Registrar">
-                        </p>                        
-                    </form>
-                </center>
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-center">
+                    <h5 class="text-center p-3"><b>TÉRMINOS Y CONDICIONES:</b></h5>
+                    <div class="form-floating form-group col-8">
+                        <textarea class="form-control" id="floatingTextarea" disabled="" style="height: 200px">
+AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES
+
+El usuario registrado será el responsable del tratamiento de datos y, en tal virtud, podrá recolectar, almacenar, usar y actualizar para las siguientes finalidades: Solicitar cambio de datos, Solicitar retiro de datos.
+Advertencia: Cada finalidad que usted incluya en este formato debe contar con un mecanismo que le permita al Titular seleccionar por separado si acepta o no que se efectúe ese tratamiento particular.
+Manifiesto que me informaron que en caso de recolección de mi información sensible tengo derecho a contestar o no las preguntas que me formulen y a entregar o no los datos solicitados.
+Entiendo que son datos sensibles aquellos que afectan la intimidad del Titular o cuyo uso indebido puede generar discriminación como mi orientación sexual.
+Manifiesto que me informaron que los datos sensibles que se recolectarán serán utilizados para las siguientes finalidades: Recolección, almacenamiento, uso y circulación para mejorar los servicios de la empresa y mejorar la experiencia del cliente.
+_____________________________________________________                            
+DERECHOS DEL TITULAR
+                        
+Sus derechos como titular del dato son los previstos en la Constitución y en la Ley 1581 de 2012, especialmente los siguientes:
+
+a) Acceder en forma gratuita a los datos proporcionados que hayan sido objeto de tratamiento.
+
+b) Solicitar la actualización y rectificación de su información frente a datos parciales, inexactos, incompletos,
+fraccionados, que induzcan a error, o a aquellos cuyo tratamiento esté prohibido o no haya sido autorizado.
+
+c) Solicitar prueba de la autorización otorgada.
+
+d) Presentar ante la Superintendencia de Industria y Comercio (SIC) quejas por infracciones a lo dispuesto en la
+normatividad vigente.
+
+e) Revocar la autorización y/o solicitar la supresión del dato, a menos que exista un deber legal o contractual que haga
+imperativo conservar la información.
+
+f) Abstenerse de responder las preguntas sobre datos sensibles o sobre datos de las niñas y niños y adolescentes.
+
+
+Por todo lo anterior, he otorgado mi consentimiento a SANRES para que trate mi información personal de acuerdo con la Política de Tratamiento de Datos Personales dispuesta por la ley colombiana, la cual puede ser revisada en:
+https://www.sic.gov.co/sites/default/files/files/Nuestra_Entidad/Publicaciones/Cartilla_formatos_datos_Personales_nov22.pdf
+                        
+Manifiesto que la presente autorización me fue solicitada y puesta de presente antes de entregar mis datos y que la suscribo de forma libre y voluntaria una vez leída en su totalidad.
+                        </textarea>
+                    </div>
+                </div>
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="form-group col-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="TermsyConditions" id="TermsyConditions">
+                                <label class="form-check-label" for="TermsyConditions">
+                                    Acepto los términos y Condiciones
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="form-group">
+                    <br>
+                    <p>
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </p>
+                </div>
             </div>
-        </div>
+        </form>
+    </div>
+</div>
+
         <br>
         <div id="footer" class="container-fluid">
             <hr class="m-0">
