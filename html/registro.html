@@ -36,14 +36,33 @@
                 <div class="row">
                     <div class="form-group col-6">
                         <p>
-                            <label for="" class="col-form-label">Ingrese sus Nombres y Apellidos:</label>
-                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ana María Rodriguez Perez" id="txtNombreApellido" name="txtNombreApellido">
+                            <label for="" class="col-form-label">Ingrese sus Nombres:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ana María" id="txtNombre" name="txtNombre">
                         </p>
                     </div>
                     <div class="form-group row col-6">
                         <p>
+                            <label for="" class="col-form-label">Ingrese sus Apellidos:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Rodriguez Perez" id="txtApellido" name="txtApellido">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <p>
                             <label for="" class="col-form-label">Ingrese el número de su documento de identidad:</label>
                             <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="0000000000" id="txtDoc" name="txtDoc" min="0000000000" max="9999999999">
+                        </p>
+                    </div>
+                    <div class="form-group row col-6">
+                        <p>
+                            <label for="" class="col-form-label">Seleccione el género con el que se identifica:</label>
+                            <select type="number" class="form-select shadow bg-body rounded border-primary" required="" id="genero" name="genero">
+                                <option selected>Selecciona...</option>
+                                <option value="1">Hombre</option>
+                                <option value="2">Mujer</option>
+                                <option value="3">Otro</option>
+                            </select>
                         </p>
                     </div>
                 </div>
