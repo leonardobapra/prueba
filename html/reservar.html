@@ -38,16 +38,14 @@
                         <div class="row">
                             <div class="form-group col-6">
                                 <p>
-                                    <label for="" class="col-form-label">Ingrese sus Nombres:</label>
-                                    <input type="text" class="form-control shadow bg-body rounded border-primary" required=""
-                                        placeholder="Ana María" id="txtNombre" name="txtNombre">
+                                    <label for="txtNombre" class="col-form-label">Ingrese sus Nombres:</label>
+                                    <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ana María" id="txtNombre" name="txtNombre">
                                 </p>
                             </div>
                             <div class="form-group row col-6">
                                 <p>
-                                    <label for="" class="col-form-label">Ingrese sus Apellidos:</label>
-                                    <input type="text" class="form-control shadow bg-body rounded border-primary" required=""
-                                        placeholder="Rodriguez Perez" id="txtApellido" name="txtApellido">
+                                    <label for="txtApellido" class="col-form-label">Ingrese sus Apellidos:</label>
+                                    <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Rodriguez Perez" id="txtApellido" name="txtApellido">
                                 </p>
                             </div>
                         </div>
@@ -55,16 +53,14 @@
                             <div class="form-group col-6">
                                 <p>
                                     <label for="" class="col-form-label">Ingrese el número de su documento de identidad:</label>
-                                    <input type="number" class="form-control shadow bg-body rounded border-primary" required=""
-                                        placeholder="0000000000" id="txtDoc" name="txtDoc" min="0000000000" max="9999999999">
+                                    <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="0000000000" id="txtDoc" name="txtDoc" min="0000000000" max="9999999999">
                                 </p>
                             </div>
                             <div class="form-group row col-6">
                                 <p>
-                                    <label for="" class="col-form-label">Seleccione el género con el que se identifica:</label>
-                                    <select type="number" class="form-select shadow bg-body rounded border-primary" required="" id="genero"
-                                        name="genero">
-                                        <option selected>Selecciona...</option>
+                                    <label for="genero" class="col-form-label">Seleccione el género con el que se identifica:</label>
+                                    <select required type="number" class="form-select shadow bg-body rounded border-primary" id="genero" name="genero">
+                                        <option selected disabled value="">Selecciona...</option>
                                         <option value="1">Hombre</option>
                                         <option value="2">Mujer</option>
                                         <option value="3">Otro</option>
@@ -128,11 +124,12 @@
                                 </p> 
                             </div> 
                         </div> 
-                        <hr>                                                                   
+                        <hr> 
+                    </div>
                         <div class="justify-content-center text-start p-4"><span><strong>Por favor responda estas preguntas para una estadía placentera:</strong></span></div>
 
                             <fieldset class="row mb-3">
-                                <div class="form-group col-6 justify-content-center">
+                                <div class="form-group col-6 justify-content-center" required="">
                                     <strong>¿Necesita que lo recojamos?<br></strong>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="grecoger" id="grecoger1" value="SI">
@@ -147,7 +144,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="form-group col-6 justify-content-center" required="">
                                     <strong>¿Va a traer una Mascota?<br></strong>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="grmascota" id="grmascota1" value="SI">
@@ -164,7 +161,7 @@
                                 </div>
                             </fieldset>
                             <br>
-                        </div>                           
+
                         <div class="form-group">
                             <p><label for="comment" class="field-label"><strong>¿Algo más que debamos saber?</strong> </label></p>
                             <textarea class="form-control shadow bg-body rounded border-primary" name="commentario" cols="35" rows="3" placeholder="Háganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
