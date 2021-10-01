@@ -34,73 +34,69 @@
             </div>
         </header>
 
-        <div id="contenido">
+        <div class="container" id="contenido">
             <hr class="m-0">
             <br>
-            <center><h2><b>Buscar reservación</b></h2></center>
-            <div id="busqueda">
-                <center>
-                    <form action="" name="frmBuscar">
-                        <p>
-                            <input type="text" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
-                            <img src="../imagenes/lupa.png" alt="" width="23px">
-                        
-                        </p>
-                        <p>
-                            <b>Filtro 1:</b>
-                            <select name="lstFiltro1" id="">
-                                <option value="">Seleccione una opción</option>
-                                <option value="opcion1">Opción 1</option>
-                                <option value="opcion2">Opción 2</option>
-                                <option value="opcion3">Opción 3</option>
-                            </select>                            
-                        </p>
-                        <p>
-                            <b>Filtro 2:</b>
-                            <select name="lstFiltro2" id="">
-                                <option value="">Seleccione una opción</option>
-                                <option value="opcion1">Opción 1</option>
-                                <option value="opcion2">Opción 2</option>
-                                <option value="opcion3">Opción 3</option>
-                            </select>                            
-                        </p>
-                        <p>
-                            <b>Filtro 3:</b>
-                            <select name="lstFiltro3" id="">
-                                <option value="">Seleccione una opción</option>
-                                <option value="opcion1">Opción 1</option>
-                                <option value="opcion2">Opción 2</option>
-                                <option value="opcion3">Opción 3</option>
-                            </select>                            
-                        </p>
-                        <p>
-                            <b>Filtro 4:</b>
-                            <select name="lstFiltro4" id="">
-                                <option value="">Seleccione una opción</option>
-                                <option value="opcion1">Opción 1</option>
-                                <option value="opcion2">Opción 2</option>
-                                <option value="opcion3">Opción 3</option>
-                            </select>                            
-                        </p>
-                        <p>
-                            <b>Filtro 5:</b>
-                            <select name="lstFiltro5" id="">
-                                <option value="">Seleccione una opción</option>
-                                <option value="opcion1">Opción 1</option>
-                                <option value="opcion2">Opción 2</option>
-                                <option value="opcion3">Opción 3</option>
-                            </select>                            
-                        </p>
-                        <p>
-                            <input type="submit" name="btnBuscar" value="Buscar">
-                        </p>                        
-                    </form>
-                </center>
+            <h2 class="text-center"><b>Buscar reservación</b></h2>
+            <div class="col m-1 p-3" id="busqueda">
+                <form action="" name="frmBuscar">
+                    <div class="mb-3 text-center">
+                        <input type="text" class="shadow bg-body rounded border-primary" name="txtBuscar" placeholder="Ingrese palabra clave" size="25"> &nbsp; &nbsp; 
+                        <img src="../imagenes/lupa.png" alt="" width="23px">                        
+                    </div>
+                    <div class="mb-3 text-center ">
+                        <b>Filtro 1:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro1" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select> 
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 2:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 3:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 4:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <b>Filtro 5:</b>
+                        <select class="shadow bg-body rounded border-primary form-select-sm" name="lstFiltro2" id="">
+                            <option value="">Seleccione una opción</option>
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-info" name="btnBuscar" value="Buscar">
+                    </div>                                          
+                </form>              
             </div>
             <div id="resultados">
                 <hr>
-                <center><h2><b>Resultados</b></h2></center>    
-                <br>
+                <h2 class="text-center"><b>Resultados</b></h2>                  
                 <form action="reservarRegistrado.html">
                     <b>Hotel:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
                     <b>Dirección:</b> &nbsp;&nbsp; XXXXXXXXXXXXX &nbsp;&nbsp;&nbsp;&nbsp;
@@ -113,7 +109,9 @@
                     <b>Minibar:</b> &nbsp;&nbsp; XX &nbsp;&nbsp;&nbsp;&nbsp;
                     <b>Precio:</b> &nbsp;&nbsp; ########## &nbsp;&nbsp;&nbsp;&nbsp;
                     <br>
-                    <center><input type="submit" name="btnReservar" value="Reservar"></center>             
+                    <div class="text-center">
+                        <input type="submit" class="btn btn-primary" name="btnReservar" value="Reservar">
+                    </div>                                 
                 </form>
             </div>
         </div>
