@@ -7,6 +7,15 @@
         <div class="card row" [formGroup]="form">
             <div class="col-12">
                 <div class="row">
+                    <div class="form-goup col-8">
+                        <p>
+                            <label for="habitacion_id" class="col-form-label">Numero de Habitación:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required=""
+                                placeholder="Numero de Habitación" name="habitacion_id" id="habitacion_id" formControlName="habitacion_id">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="form-goup col-6">
                         <p>
                             <label for="cant_adultos" class="col-form-label">Numeros de Adultos:</label>
@@ -42,19 +51,19 @@
                 <div class="justify-content-center text-start p-4"><span><strong>Por favor responda estas preguntas para
                             una estadía placentera:</strong></span></div>
 
-                <!-- <fieldset class="row mb-3">
+                <fieldset class="row mb-3">
                     <div class="form-group col-6 justify-content-center">
                         <strong>¿Necesita que lo recojamos?<br></strong>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="grecoger" id="grecoger1" value="SI"
-                                required="">
+                            <input class="form-check-input" type="radio" name="recogida" id="grecoger1" value="SI"
+                                required="" formControlName="recogida">
                             <label class="form-check-label" for="grecoger1">
                                 SI
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="grecoger" id="grecoger2" value="NO"
-                                required="">
+                            <input class="form-check-input" type="radio" name="recogida" id="grecoger2" value="NO"
+                                required="" formControlName="recogida">
                             <label class="form-check-label" for="grecoger2">
                                 NO
                             </label>
@@ -63,27 +72,46 @@
                     <div class="col-sm-6">
                         <strong>¿Va a traer una Mascota?<br></strong>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="grmascota" id="grmascota1" value="SI"
-                                required="">
+                            <input class="form-check-input" type="radio" name="mascota" id="grmascota1" value="SI"
+                                required="" formControlName="mascota">
                             <label class="form-check-label" for="grmascota1">
                                 SI
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="grmascota" id="grmascota2" value="NO"
-                                required="">
+                            <input class="form-check-input" type="radio" name="mascota" id="grmascota2" value="NO"
+                                required="" formControlName="mascota">
                             <label class="form-check-label" for="grmascota2">
                                 NO
                             </label>
                         </div>
                     </div>
-                </fieldset> -->
+                </fieldset>
                 <br>
             </div>
             <div class="form-group">
                 <p><label for="com_ingreso" class="field-label"><strong>¿Algo más que debamos saber?</strong> </label></p>
                 <textarea class="form-control shadow bg-body rounded border-primary" name="com_ingreso" id="com_ingreso" formControlName="com_ingreso" cols="35"
                     rows="3" placeholder="Háganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
+                <strong>Por favor:</strong> Sea lo mas descriptivo posible.
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="form-group col-8">
+                    <p>
+                        <label for="calificacion" class="col-form-label">Calificación [1-5]:</label>
+                        <input type="number" class="form-control shadow bg-body rounded border-primary" required=""
+                            placeholder="Calificación" name="calificacion" id="calificacion" formControlName="calificacion">
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <p><label for="com_salida" class="field-label"><strong>Cuentenos su Experiencia:</strong> </label></p>
+                <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida"
+                    formControlName="com_salida" cols="35" rows="3"
+                    placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento"></textarea>
                 <strong>Por favor:</strong> Sea lo mas descriptivo posible.
             </div>
             <div class="form-group">

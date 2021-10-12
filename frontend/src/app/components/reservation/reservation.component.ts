@@ -10,11 +10,16 @@ import { DataService } from 'src/app/services/data.service';
 export class ReservationComponent implements OnInit {
   
   form = new FormGroup({
+    habitacion_id: new FormControl(''),
     cant_adultos: new FormControl(''),
     cant_ninos: new FormControl(''),
     fecha_ingreso: new FormControl(''),
     fecha_salida: new FormControl(''),
-    com_ingreso: new FormControl('')
+    recogida: new FormControl(''),
+    mascota: new FormControl(''),
+    com_ingreso: new FormControl(''),
+    calificacion: new FormControl(''),
+    com_salida: new FormControl('')
 
   });
   
