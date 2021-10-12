@@ -24,6 +24,10 @@ export class DataService {
     return this.http.get(this.API+'/Reservacion/history', { headers: this.getTokenHeader() });
   }
 
+  reservation(data: Object): Observable<any> {
+    return this.http.post(this.API + '/Reservacion/create', data, { headers: this.getTokenHeader() });
+  }
+
   search(text: string): Observable<any> {
     let params = new HttpParams();
     params = params.append('text', text);
