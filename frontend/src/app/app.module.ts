@@ -12,6 +12,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { RhistoryComponent } from './components/rhistory/rhistory.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RhistoryComponent } from './components/rhistory/rhistory.component';
     ProfileComponent,
     HomeComponent,
     ReservationComponent,
-    RhistoryComponent
+    RhistoryComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

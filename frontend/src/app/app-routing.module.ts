@@ -6,6 +6,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { HomeComponent } from './components/home/home.component';
 import { RhistoryComponent } from './components/rhistory/rhistory.component';
+import { SearchComponent } from './components/search/search.component';
 /* import { Historial-ReservasComponent } from './components/home/historial-reservas.component'; */
 
 const routes: Routes = [ 
@@ -15,6 +16,8 @@ const routes: Routes = [ 
   { path: 'home', component: HomeComponent },
   { path: 'rhistory', component: RhistoryComponent },
   { path: 'reservation', component: ReservationComponent },
+  { path: 'search', component: SearchComponent },
+  
 /*   { path: 'historial-reservas', component: Historial-ReservasComponent }, */
 
 

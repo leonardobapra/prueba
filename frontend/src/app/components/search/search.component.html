@@ -1,0 +1,104 @@
+<div>
+    <div class="container-fluid">
+        <div class="row mt-5 mb-4">
+            <div class="col-6 offset-3">
+                <div class="input-group">
+                    <input type="text" id="search" class="form-control" placeholder="Busqueda de habitaciones" [(ngModel)]="searchText">
+                    <button class="btn btn-outline-primary" type="button" id="search-btn" (click)="search()">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="min_floor">Entre el piso</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="min_floor" class="form-control" (keyup)="piso($event)" [(ngModel)]="minFloor">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="max_floor">y el piso</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="max_floor" class="form-control" (keyup)="piso($event)" [(ngModel)]="maxFloor">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="min_floor">Precio entre</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="min_price" class="form-control" (keyup)="precio($event)" [(ngModel)]="minPrice">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-5">
+                        <label for="max_floor">y</label>
+                    </div>
+                    <div class="col-7">
+                        <input type="number" id="max_price" class="form-control" (keyup)="precio($event)" [(ngModel)]="maxPrice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="col">
+                <label for="capacity" class="form-label">Capacidad:</label>
+                <input type="number" id="capacity" min="1" max="5" class="form-control" (keyup)="capacidad($event)" [(ngModel)]="capacity">
+            </div>
+            <div class="col">
+                <label for="stars" class="form-label">Estrellas: </label>
+                <select id="stars" class="form-control" (change)="estrellas()" [(ngModel)]="stars">
+                    <option value="0">Seleccione</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="row col-6 offset-3 my-4">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="minibar" (change)="minibar()"
+                    [(ngModel)]="_minibar">
+                <label class="form-check-label" for="flexCheckDefault">Tiene minibar </label>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row col-6 offset-3">
+            <div class="card result p-3 my-3" *ngFor="let result of results">
+                <div class="row" id="result-1">
+                    <div class="col-4 d-flex align-items-center">
+                        <img src="https://picsum.photos/175" alt="foto resultado 1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-8">
+                        <h5 class="my-3">{{ result.hotel.nombre }} (<span>{{ result.hotel.ciudad }}</span>)</h5>
+                        <h5 class="my-3">{{ result.tipo.nombre }}</h5>
+                        <h5 class="my-3">$ {{ result.precio }} / noche</h5>
+                        <h5 class="my-3">{{ result.hotel.estrellas }} <i
+                                class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ result.capacidad }} <i
+                                class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;<span *ngIf="result.minibar == 1"><i
+                                    class="fas fa-wine-bottle"></i> minibar</span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
