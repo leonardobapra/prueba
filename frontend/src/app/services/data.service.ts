@@ -25,7 +25,11 @@ export class DataService {
   }
 
   reservation(data: Object): Observable<any> {
+<<<<<<< Updated upstream
     return this.http.post(this.API + '/Reservacion/create', data, { headers: this.getTokenHeader() });
+=======
+    return this.http.post(this.API+'/Reservacion/create', data, { headers: this.getTokenHeader() });
+>>>>>>> Stashed changes
   }
 
   search(text: string): Observable<any> {

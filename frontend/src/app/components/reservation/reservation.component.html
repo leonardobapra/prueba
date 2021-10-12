@@ -1,1 +1,99 @@
-<p>reservation works!</p>
+<div class="container">
+    <hr class="m-0">
+    <br>
+    <h1 class="text-center"><b>RESERVA...</b></h1>
+    <h4 class="text-center p-4"><b>Haga su reserva de la habitación en minutos</b></h4>
+    <div class="section">
+        <div class="card row" [formGroup]="form">
+            <div class="col-12">
+                <div class="row">
+                    <div class="form-goup col-6">
+                        <p>
+                            <label for="cant_adultos" class="col-form-label">Numeros de Adultos:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required=""
+                                placeholder="Numeros de Adultos" name="cant_adultos" id="cant_adultos" formControlName="cant_adultos">
+                        </p>
+                    </div>
+                    <div class="form-group col-6">
+                        <p>
+                            <label for="cant_ninos" class="col-form-label">Numero de Niños:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required=""
+                                placeholder="Numero de Niños" name="cant_ninos" id="cant_ninos" formControlName="cant_ninos">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <p>
+                            <label for="fecha_ingreso" class="col-form-label">Fecha de Entrada:</label>
+                            <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
+                                placeholder="dd/mm/yyyy" name="fecha_ingreso" id="fecha_ingreso" formControlName="fecha_ingreso">
+                        </p>
+                    </div>
+                    <div class="form-group col-6">
+                        <p>
+                            <label for="fecha_salida" class="col-form-label">Fecha de Salida:</label>
+                            <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
+                                placeholder="dd/mm/yyyy" name="fecha_salida" id="fecha_salida" formControlName="fecha_salida">
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="justify-content-center text-start p-4"><span><strong>Por favor responda estas preguntas para
+                            una estadía placentera:</strong></span></div>
+
+                <!-- <fieldset class="row mb-3">
+                    <div class="form-group col-6 justify-content-center">
+                        <strong>¿Necesita que lo recojamos?<br></strong>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grecoger" id="grecoger1" value="SI"
+                                required="">
+                            <label class="form-check-label" for="grecoger1">
+                                SI
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grecoger" id="grecoger2" value="NO"
+                                required="">
+                            <label class="form-check-label" for="grecoger2">
+                                NO
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <strong>¿Va a traer una Mascota?<br></strong>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grmascota" id="grmascota1" value="SI"
+                                required="">
+                            <label class="form-check-label" for="grmascota1">
+                                SI
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="grmascota" id="grmascota2" value="NO"
+                                required="">
+                            <label class="form-check-label" for="grmascota2">
+                                NO
+                            </label>
+                        </div>
+                    </div>
+                </fieldset> -->
+                <br>
+            </div>
+            <div class="form-group">
+                <p><label for="com_ingreso" class="field-label"><strong>¿Algo más que debamos saber?</strong> </label></p>
+                <textarea class="form-control shadow bg-body rounded border-primary" name="com_ingreso" id="com_ingreso" formControlName="com_ingreso" cols="35"
+                    rows="3" placeholder="Háganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
+                <strong>Por favor:</strong> Sea lo mas descriptivo posible.
+            </div>
+            <div class="form-group">
+                <br>
+                <p>
+                    <button href="historalReservas.html" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar
+                        Reserva</button>
+                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
