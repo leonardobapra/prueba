@@ -6,6 +6,31 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    var cont = 0
+    function cambia() {
+        cont++;
+        switch (cont % 4 + 1) {
+            case 1:
+                document.getElementById("fotocambia").src = "assets/imagenes/buca1.jpg";
+                break;
+            case 2:
+                document.getElementById("fotocambia").src = "assets/imagenes/buca2.jpg";
+                break;
+            case 3:
+                document.getElementById("fotocambia").src = "assets/imagenes/sol.jpg";
+                break;
+            case 4:
+                document.getElementById("fotocambia").src = "assets/imagenes/dan.jpg";
+                break;
+        }
+
+    }
+    function inicio() {
+        setInterval(cambia, 3000);
+    }
+    window.onload = inicio;
+</script>
 </head>
 <body>
   <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
