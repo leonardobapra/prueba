@@ -12,7 +12,7 @@ class CreateReservasTable extends Migration
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
             $table->string('doc_cliente',10);
-            $table->foreignId('id_habitacion');
+            $table->foreignId('habitacion_id');
             $table->tinyInteger('cant_adultos');
             $table->tinyInteger('cant_ninos');
             $table->boolean('mascota');
@@ -24,7 +24,7 @@ class CreateReservasTable extends Migration
             $table->string('com_salida',200);
 
             $table->foreign('doc_cliente')->references('doc')->on('clientes');
-            $table->foreign('id_habitacion')->references('id')->on('habitaciones');
+            $table->foreign('habitacion_id')->references('id')->on('habitaciones');
         });
     }
 

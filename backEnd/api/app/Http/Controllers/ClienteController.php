@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use App\Models\Reserva;
 use Illuminate\Support\Facades\Hash;
 use JWTAuth;
 
@@ -77,6 +78,19 @@ class ClienteController extends Controller
 
 
 
+    }
+    public function eliminar(Request $request)
+    {
+        $data = $request->all();
+        $data['clave'] = Hash::make($data['clave']);
+        $token = $request->bearerToken();
+        $doc = JWTAuth::getPayload($token)->toArray()['sub'];
+      
+        $deleted = Reserva::where('doc_cliente',$doc)->delete($data)!=0;
+        $deleted = Cliente::where('doc',$doc)->delete($data)!=0;
+      
+        
+       return array('deleted'=>$deleted);
     }
 
 

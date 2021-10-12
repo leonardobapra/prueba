@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\HabitacionController;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\TipoHabitacionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +28,15 @@ Route::post('/Cliente/signup', [ClienteController::class, 'signup']);
 Route::post('/Cliente/login', [ClienteController::class, 'login']);
 Route::get('/Habitacion/search', [HabitacionController::class, 'search']);
 Route::get('/Habitacion/filter', [HabitacionController::class, 'filter']);
+Route::get('/Hotel/filter', [HotelController::class, 'filter']);
+// Route::get('/TipoHabitacion/filter', [TipoHabitacionController::class, 'filter']);
+Route::post('/Reservacion/createNR', [ReservaController::class, 'createNR']);
 
 Route::group(['middleware' =>['jwt.verify']], function(){
-    Route::get('/Cliente',[ClienteController::class,'showAll']);
+    // Route::get('/Cliente',[ClienteController::class,'showAll']);
     Route::post('/Cliente/update', [ClienteController::class, 'update']);
     Route::post('/Reservacion/create', [ReservaController::class, 'create']);
-    Route::post('/Reservacion/history', [ReservaController::class, 'showByCliente']);
+    Route::get('/Reservacion/history', [ReservaController::class, 'showByCliente']);
+    Route::delete('/Cliente/eliminar', [ClienteController::class, 'eliminar']);
+    Route::delete('/Reserva/eliminarR', [ReservaController::class, 'eliminarR']);
 });

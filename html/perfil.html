@@ -7,76 +7,118 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Proyecto WEB-Perfil</title>
+    
+    <script>
+        function validar() {
+     
+            let contraNueva = document.getElementById("txtContraNueva").value;
+            let contraConf = document.getElementById("txtContraConf").value;
+              
+            if (contraNueva != contraConf) {
+                alert('!! Los campos Nueva Contraseña y Confirmar Nueva Contraseña, no coinciden ¡¡');               
+                
+            }               
+            
+        }
+    </script>
 </head>
 <body>
-    <div class="container-fluid m-0 p-0" id="contenedor">
-        <header class="p-1" id="header">
-            <div class="row g-0" class="hotel">
-                <div class="col-1 nav-item ms-5" class="menu">
-                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
-                <div class="col-9 nav justify-content-end d-flex align-items-center" id="nav">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="buscarRegistrado.html">Buscar</a></li>
-                        <li><a href="historalReservas.html">Mis Reserva</a></li>
-                        <li><a href="sitiosTuristicos.html">Sitios Turísticos</a></li>
-                        <li><a href="../inicio.html">Cerrar sesión</a></li>
-                    </ul>
-                </div>
-                <div class="col-1 nav justify-content-end d-flex align-items-center" id="nav">
-                    <ul class="nav justify-content-center d-flex align-items-center">
-                        <li><img src="../imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px"></li>
-                        <li><span>Usuario</span></li>
-                    </ul>
-                </div>
+    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+        id="contenedor">
+        <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
+            <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
+                <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
             </div>
-        </header>
-
-        <div class="container" id="contenido">
+            <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
+                id="content_header">
+                <header
+                    class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                    id="header">
+                    <div class="row m-0 p-0">
+                        <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                            <h1 id="title">SANREST</h1>
+                        </div>
+                        <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                            <div class="row container-fluid m-0 p-0">
+                                <div class="col-12 m-0 p-0 d-flex justify-content-end" class="input-group">
+                                    <ul>
+                                        <li><a href="../index.html">
+                                                <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar
+                                                    sesión</button>
+                                                <img src="../imagenes/cerrar-sesion.png" width="30px" alt="login"
+                                                    for="cerrar">&nbsp;
+                                            </a></li>
+                                    </ul>
+                                    <ul class="nav justify-content-center d-flex align-items-center">
+                                        <li><img src="../imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
+                                        </li>
+                                        <li><span><b>Usuario</b></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="h-25 nav-item">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 d-flex justify-content-start" id="nav">
+                            <ul>
+                                <li><a href="inicio.html">Inicio</a></li>
+                                <li><a href="historalReservas.html">Mis Reservas</a></li>
+                                <li><a href="perfil.html">Mi Perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
             <hr class="m-0">
-            <br>
-            <h2 class="text-center"><b>Mi Perfil</b></h2>
-            <div class="col m-1 p-3" id="section">
-                <form action="" name="frmMiPerfil">
-                    <div class="mb-3 text-center">
-                        <label>Correo electronico: 
-                            <input type="email" class="form-control shadow bg-body rounded border-primary" name="txtCorreo" id="" required="" placeholder="ejemplo@mail.com"> 
-                        </label>
+            <div class="section class="d-flex justify-content-center align-items-center h-100"></div>">
+                <form action="" class="row">
+                    <div class="col-7 offset-3">
+                        <div>
+                            <p class="fs-2 fw-bold text-center">MI PERFIL</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-goup col-7">                                
+                                <label for="" class="col-form-label fw-bold">Direccion de Correo Electronico:</label>
+                                <input type="email" class="form-control shadow bg-body rounded border-primary" required="" placeholder="ejemplo@mail.com" id="email" name="email">                                                                
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-7">                                
+                                <label for="" class="col-form-label fw-bold">Contraseña Actual:</label></b>
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="txtContra" id="txtContra" required="" placeholder="Ingrese contraseña registrada">                                                                
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-7">                                
+                                <label for="" class="col-form-label fw-bold">Nueva Contraseña: </label>
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="txtContraNueva" id="txtContraNueva" required="" placeholder="Ingrese nueva contraseña">                                                                
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="form-group col-7">                                
+                                <label for="" class="col-form-label fw-bold">Confirmar Nueva Contraseña: </label></b>
+                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="txtContraConf" id="txtContraConf" required="" placeholder="Confirmar Nueva Contraseña">                                                                
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-4">
+                            <div class="form-group col-7">
+                                <button type="submit" class="btn btn-primary" id="ingresar" onclick="validar()">Actualizar</button>
+                                <button type="reset" class="btn btn-danger">Cancelar</button>                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3 text-center">
-                        <p>
-                            <label>Contraseña Actual: 
-                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Contraseña Actual">
-                            </label>
-                        </p>
-                    </div>
-                    <div class="mb-3 text-center">
-                        <p>
-                            <label>Nueva Contraseña: 
-                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Contraseña Nueva">
-                            </label>
-                        </p>
-                    </div>
-                    <div class="mb-3 text-center">
-                        <p>
-                            <label>Confirmar Nueva Contraseña: 
-                                <input type="password" class="form-control shadow bg-body rounded border-primary" name="" id="" required="" placeholder="Confirmar Nueva Contraseña">
-                            </label>
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <input type="reset" class="btn btn-danger" name="" id="" value="Cancelar">
-                        <input type="submit" class="btn btn-primary" name="btnActualizar" value="Actualizar">                        
-                    </div>                     
-                </form>               
+                </form>                
             </div>
         </div>
         <br>
-        <div id="footer" class="container-fluid">
+        <div id="footer" class="container-fluid border border-2 border-secondary">
             <hr class="m-0">
             <footer class="text-center p-1 m-0">
-                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span> © 2021 | TEAM 2 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
                 <span>TODOS LOS DERECHOS RESERVADOS</span>
             </footer>
         </div>

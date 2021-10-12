@@ -9,35 +9,65 @@
     <title>Ingreso...</title>
 </head>
 <body>
-    <div class="container-fluid m-0 p-0" id="contenedor">
-        <header class="p-1" id="header">
-            <div class="row" class="hotel">
-                <div class="col-3 nav-item ms-5" class="menu">
-                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
-                <div class="col-8 nav justify-content-end d-flex align-items-center" id="nav">
-                    <ul>
-                        <li><a href="../inicio.html">Inicio</a></li>
-                        <li><a href="buscar.html">Buscar</a></li>
-                        <li><a href="registro.html">Registrarse</a></li>
-                    </ul>
-                </div>
+    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+        id="contenedor">
+        <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
+            <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
+                <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
             </div>
-        </header>
-
+            <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
+                id="content_header">
+                <header
+                    class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                    id="header">
+                    <div class="row m-0 p-0">
+                        <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                            <h1 id="title">SANREST</h1>
+                        </div>
+                        <div class="w-25 d-flex align-items-end" id="login">
+                            <div class="row container-fluid m-0 p-0">
+                                <div class="col-12">
+                                    <div class="row" class="input-group">
+                                        <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                            <ul>
+                                                <li><a href="../html/registro.html">
+                                                        <button type="submit" class="btn btn-success btn-sm" id="Registrarse">Registrarse</button>
+                                                        <img src="../imagenes/register.png" width="30px" alt="Registrarse" for="Registrarse"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="h-25 nav-item">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 d-flex justify-content-start" id="nav">
+                            <ul>
+                                <li><a href="../index.html">Inicio</a></li>
+                                <li><a href="buscar.html">Buscar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
         <div class="container">
             <hr class="m-0">
             <br>
             <h1 class="text-center"><b>INGRESO</b></h1>
             <h4 class="text-center p-4"><b>Ingrese sus datos para iniciar sesión.</b></h4>
             <div class="section">
-                <form action="" class="row ">
+                <form action="" class="row">
                     <div class="col-12">
                         <div class="row justify-content-center">
                             <div class="form-goup col-6">
                                 <p>
-                                    <b><label for="" class="col-form-label">Usuario:</label></b>
-                                    <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Número de documento del Usuario" min="0000000000" max="9999999999">
+                                    <b><label for="" class="col-form-label">Direccion de Correo Electronico:</label></b>
+                                    <input type="email" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Correo electrónico del Usuario" id="email" name="email">
+                                    <div class="valid-feedback fw-bold">!! Campo correcto ¡¡</div>
+                                    <div class="invalid-feedback fw-bold">Por favor, ingrese correo electrónico</div>
                                 </p>
                             </div>
                         </div>
@@ -46,6 +76,8 @@
                                 <p>
                                     <b><label for="" class="col-form-label">Contraseña:</label></b>
                                     <input type="password" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ingrese contraseña registrada">
+                                    <div class="valid-feedback fw-bold">!! Campo correcto ¡¡</div>
+                                    <div class="invalid-feedback fw-bold">Por favor, ingrese contraseño</div>
                                 </p>
                             </div>
                         </div>
@@ -53,7 +85,7 @@
                             <div class="form-group col-6">
                                 <br>
                                 <p>
-                                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                                    <button type="submit" class="btn btn-primary" id="ingresar">Ingresar</button></a>
                                     <button type="reset" class="btn btn-danger">Cancelar</button>
                                 </p>
                             </div>
@@ -65,15 +97,36 @@
                 </p>
             </div>
         </div>
-
         <br>
-        <div id="footer" class="container-fluid">
+        <div id="footer" class="container-fluid border border-2 border-secondary">
             <hr class="m-0">
             <footer class="text-center p-1 m-0">
-                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span> © 2021 | TEAM 2 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
                 <span>TODOS LOS DERECHOS RESERVADOS</span>
             </footer>
         </div>
     </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+    </script>
 </body>
 </html>

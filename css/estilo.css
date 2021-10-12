@@ -13,8 +13,28 @@ body{
     color: black;
 }
 
+#title{
+    color: black;
+    font-weight: bolder;
+    font-family: 'fantasy';
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    width: 75%;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#logo{
+    background-image: radial-gradient(circle at 50% 50%, white  0,#008784 100%);
+    opacity: 85%;
+    clear: both;
+    content: '';
+    display: table;
+}
+
 .menu{
-    width: 95%;
     margin: 0 auto;
 }
 
@@ -31,14 +51,49 @@ body{
     clear: both;
     content: '';
     display: table;
+
+}
+
+#login{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    right: 1%;
+}
+
+#login ul li{
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+}
+
+
+#login ul li a:hover{
+    color: rgb(110, 94, 22);
+}
+
+#logo{
+    background-image: radial-gradient(circle at 50% 50%, white  0,#008784 100%);
+    opacity: 85%;
+    clear: both;
+    content: '';
+    display: table;
 }
 
 #nav{
-    float: right;
+    background-image: radial-gradient(circle at 40% 60%, rgb(28, 201, 192)  0,#029c6e 100%);
+    opacity: 95%;
+    clear: both;
+    display: table;
+    padding: 0;
+    margin: 0;
+    max-height:25px;
 }
 
 #nav ul li{
     list-style: none;
+    margin: 0;
+    padding: 0;
     margin-left: 40px;
     float: left;
 }
@@ -46,20 +101,15 @@ body{
 #nav ul li a{
     text-decoration: none;
     opacity: 100%;
-    font-size: larger;
+    font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
     color: black;
     font-weight: bold;
 }
 
-#nav ul li span{
-    font-weight: bold;
-    font-size: medium;
-    color: black;
-}
 
 #nav ul li a:hover{
-    color: rgb(100, 74, 192);
+    color: rgb(198, 233, 0);
 }
 
 #footer{
@@ -77,3 +127,8 @@ body{
     color: black;
 
 }
+
+.izq {
+    float: left;
+    margin-right: 15px;
+  }

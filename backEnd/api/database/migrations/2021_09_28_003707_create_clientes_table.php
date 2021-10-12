@@ -17,7 +17,8 @@ class CreateClientesTable extends Migration
             $table->string('correo',50)->unique();
             $table->tinyInteger('genero'); //1->Hombre 2->Mujer 3->Otro
             $table->string('clave',64);
-            $table->date('f_registro');
+            /* $table->date('f_registro'); */
+            $table->timestamp('f_registro')->useCurrent();
 
             $table->primary('doc');
         });

@@ -18,4 +18,7 @@ class Habitacion extends Model
     public function hotel(){
         return $this->belongsTo(Hotel::class);
     }
+    public function tipo(){
+        return $this->belongsTo(TipoHabitacion::class);
+    }
 }

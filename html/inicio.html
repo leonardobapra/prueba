@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Proyecto WEB - Inicio</title>
+    <script>
+        var cont=0
+        function cambia() {
+        cont++;
+        switch(cont%4+1)
+         {
+         case 1:
+         document.getElementById("fotocambia").src="../imagenes/buca1.jpg";
+         break;
+         case 2:
+         document.getElementById("fotocambia").src="../imagenes/buca2.jpg";
+         break;
+         case 3:
+         document.getElementById("fotocambia").src="../imagenes/sol.jpg";
+         break;
+         case 4:
+         document.getElementById("fotocambia").src="../imagenes/dan.jpg";
+         break;
+         }
+        
+        }
+        function inicio() {
+        setInterval(cambia, 3000);
+        }
+        window.onload=inicio;
+        </script>
+</head>
+<body>
+    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+        id="contenedor">
+        <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
+            <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
+                <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+            </div>
+            <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
+                id="content_header">
+                <header
+                    class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                    id="header">
+                    <div class="row m-0 p-0">
+                        <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                            <h1 id="title">SANREST</h1>
+                        </div>
+                        <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                            <div class="row container-fluid m-0 p-0">
+                                <div class="col-12 m-0 p-0 d-flex justify-content-end" class="input-group">
+                                    <ul>
+                                        <li><a href="../index.html">
+                                                <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar
+                                                    sesión</button>
+                                                <img src="../imagenes/cerrar-sesion.png" width="30px" alt="login"
+                                                    for="cerrar">&nbsp;
+                                            </a></li>
+                                    </ul>
+                                    <ul class="nav justify-content-center d-flex align-items-center">
+                                        <li><img src="../imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
+                                        </li>
+                                        <li><span><b>Usuario</b></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="h-25 nav-item">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 d-flex justify-content-start" id="nav">
+                            <ul>
+                                <li><a href="inicio.html">Inicio</a></li>
+                                <li><a href="historalReservas.html">Mis Reservas</a></li>
+                                <li><a href="perfil.html">Mi Perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="contenido">
+            <hr class="m-0">
+            <br>
+            <div class="row">
+                <div class="col-8 px-0">
+                    <div id="section">
+                        <center>
+                            <a href="html/buscar.html">
+                            <img id="fotocambia" src="../imagenes/bucaramanga.jpg" width="800px" height="400px" alt="bucaramanga"></a>
+                        </center>                
+                    </div>
+                </div>
+                <div class="col pox-0" id="prueb" style="border: double;">
+                    <center><h3>sitios turísticos</h3></center> <h3>sitios turísticos</h3>
+                     <div class="row">
+                         <div class="col">
+                             <img src="../imagenes/catedralSagradaFlia.jpg" width="100%" height="30%" alt="Catedral Metropolitana de la Sagrada Familia">
+ 
+                         
+                             <p><h2><b>Catedral Metropolitana de la Sagrada Familia</b></h2></p>
+                 
+                 <p>
+                     Es uno de los templos religiosos más importantes de la ciudad, su imponente 
+                     infraestructura que incluye una cúpula amarilla y verde, ocupa un espacio total 
+                     de 72,20 m de largo y 32,50 de ancho. La catedral comprende tres cuerpos: un altar 
+                     mayor con una altura interior de 11,73 m, y dos altares laterales. Además, tiene 10 
+                     columnas en las naves laterales con acceso directo a la calle. El techo se realizó 
+                     a través de un acabado artesanal en estuco y metal.
+                 </p>  
+ 
+                         </div>
+                         <div class="row">
+                             <div class="col">
+                                 <img src="../imagenes/parqueSantander.jpg" width="100%" height="30%" alt="Parque Santander">
+     
+                             
+                                 <p><h2><b>Parque Santander</b></h2></p>
+                     
+                                 <p>
+                                     Es un lugar histórico, oficialmente se inaugura en 1925. Es un parque que presenta una serie de caminos para poder dar un paseo, sentarse y también admirar el entorno natural con el que se encuentran los visitantes. Se construyó para homenajear al llamado Hombre de las Leyes Francisco de Paula Santander y este lugar se le conoce como parque o Plaza Santander. Además de la variedad de flora de este parque es interesante destacar alguna que otra fuente, esculturas.
+                                 </p>
+     
+                             </div>
+ 
+                     </div>
+                      
+                 </div>
+ 
+             </div>
+            </div>
+        </div>
+        <br>
+        <div id="footer" class="container-fluid border border-2 border-secondary">
+            <hr class="m-0">
+            <footer class="text-center p-1 m-0">
+                <span> © 2021 | TEAM 2 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span>TODOS LOS DERECHOS RESERVADOS</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

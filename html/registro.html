@@ -9,22 +9,53 @@
     <title>Proyecto WEB - Registro</title>
 </head>
 <body>
-    <div class="container-fluid m-0 p-0" id="contenedor">
-        <header class="p-1" id="header">
-            <div class="row" class="hotel">
-                <div class="col-3 nav-item ms-5" class="menu">
-                    <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
-                <div class="col-8 nav justify-content-end d-flex align-items-center" id="nav">
-                    <ul>
-                        <li><a href="../inicio.html">Inicio</a></li>
-                        <li><a href="buscar.html">Buscar</a></li>
-                        <li><a href="ingreso.html">Ingresar</a></li>
-                    </ul>
-                </div>
+    <div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+        id="contenedor">
+        <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
+            <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
+                <img src="../imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
             </div>
-        </header>
-
+            <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
+                id="content_header">
+                <header
+                    class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                    id="header">
+                    <div class="row m-0 p-0">
+                        <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                            <h1 id="title">SANREST</h1>
+                        </div>
+                        <div class="w-25 d-flex align-items-end" id="login">
+                            <div class="row container-fluid m-0 p-0">
+                                <div class="col-12">
+                                    <div class="row" class="input-group">
+                                        <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                            <ul>
+                                                <li><a href="../html/ingreso.html">
+                                                        <button type="submit" class="btn btn-success btn-sm"
+                                                            id="ingreso">Ingresar</button>
+                                                        <img src="../imagenes/login.png" width="30px" alt="login"
+                                                            for="ingreso">
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="h-25 nav-item">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 d-flex justify-content-start" id="nav">
+                            <ul>
+                                <li><a href="../index.html">Inicio</a></li>
+                                <li><a href="buscar.html">Buscar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
 <div class="container">
     <hr class="m-0">
     <br>
@@ -48,13 +79,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-6">
+                    <div class="form-group col-4">
                         <p>
                             <label for="" class="col-form-label">Ingrese el número de su documento de identidad:</label>
                             <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="0000000000" id="txtDoc" name="txtDoc" min="0000000000" max="9999999999">
                         </p>
                     </div>
-                    <div class="form-group row col-6">
+                    <div class="form-group row col-4">
                         <p>
                             <label for="genero" class="col-form-label">Seleccione el género con el que se identifica:</label>
                             <select required type="number" class="form-select shadow bg-body rounded border-primary" id="genero" name="genero">
@@ -63,6 +94,12 @@
                                 <option value="2">Mujer</option>
                                 <option value="3">Otro</option>
                             </select>
+                        </p>
+                    </div>
+                    <div class="form-group col-4">
+                        <p>
+                            <label for="" class="col-form-label">Si su opcion es Otro:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Por favor especifique su genero" id="txtApellido" name="txtApellido">
                         </p>
                     </div>
                 </div>
@@ -160,10 +197,10 @@ Manifiesto que la presente autorización me fue solicitada y puesta de presente 
 </div>
 
         <br>
-        <div id="footer" class="container-fluid">
+        <div id="footer" class="container-fluid border border-2 border-secondary">
             <hr class="m-0">
             <footer class="text-center p-1 m-0">
-                <span> © 2021 | TEAM 3 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
+                <span> © 2021 | TEAM 2 - GRUPO 05 - DESARROLLO DE SOFTWARE | MISIÓNTIC 2022</span><br>
                 <span>TODOS LOS DERECHOS RESERVADOS</span>
             </footer>
         </div>

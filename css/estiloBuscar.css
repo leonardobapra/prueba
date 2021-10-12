@@ -1,0 +1,38 @@
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#form tr {
+  text-align: center;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+
+
+.selection {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label {
+  color: darkgoldenrod;
+}
+
+
+input[type="radio"]:checked ~ label {
+  color: rgb(255, 0, 149);
+  font-size: large;
+  font: bold;
+}
+
+

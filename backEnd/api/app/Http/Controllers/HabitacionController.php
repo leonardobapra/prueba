@@ -30,8 +30,17 @@ class HabitacionController extends Controller
             case 'capacidad':
                 $habitaciones = Habitacion::where('capacidad',$request->input('value'))->get();
                 break;
-            case 'estrellas':
-                $habitaciones = Habitacion::where('estrellas',$request->input('value'))->get();
+            case 'minibar':
+                $habitaciones = Habitacion::where('minibar',$request->input('value'))->get();
+                break;
+            case 'jacuzzi':
+                $habitaciones = Habitacion::where('jacuzzi',$request->input('value'))->get();
+                break;
+            case 'balcon':
+                $habitaciones = Habitacion::where('balcon',$request->input('value'))->get();
+                break;
+            case 'id_tipo':
+                $habitaciones = Habitacion::where('id_tipo',$request->input('value'))->get();
                 break;
         }
     return $habitaciones;
