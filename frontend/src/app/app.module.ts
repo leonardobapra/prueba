@@ -11,7 +11,7 @@ import { DataService } from './services/data.service';
 import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
-import { HistorialReservasComponent } from './components/historial-reservas/historial-reservas.component';
+import { RhistoryComponent } from './components/rhistory/rhistory.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { HistorialReservasComponent } from './components/historial-reservas/hist
     ProfileComponent,
     HomeComponent,
     ReservationComponent,
-    HistorialReservasComponent
+    RhistoryComponent
   ],
   imports: [
     BrowserModule,

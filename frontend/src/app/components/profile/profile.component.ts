@@ -16,13 +16,13 @@ export class ProfileComponent implements OnInit {
     clave: new FormControl('')
   });
 
-  reservations: any[] = [];
+  // reservations: any[] = [];
 
 
   constructor(private data:DataService) { }
 
   ngOnInit(): void {
-    this.getReservations();
+    // this.getReservations();
   }
 
   update(){
@@ -31,11 +31,11 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  getReservations(){
-    let ctx = this;
-    this.data.getReservations().subscribe(function(res){
-      ctx.reservations = res as Array<any>;
-    });
-  }
+  // getReservations(){
+  //   let ctx = this;
+  //   this.data.getReservations().subscribe(function(res){
+  //     ctx.reservations = res as Array<any>;
+  //   });
+  // }
 
 }

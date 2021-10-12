@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-8 offset-2 mt-5 pt-3">
+        <h2 class="fw-bold text-center">Historial de reservaciones</h2>
+        <div class="card result p-3 my-3" *ngFor="let reservation of reservations">
+            <div class="row" id="result-1">
+                <div class="col-4 d-flex align-items-center">
+                    <img src="https://picsum.photos/175" alt="foto resultado 1" class="img-fluid rounded">
+                </div>
+                <div class="col-8">
+                    <h5 class="my-3">{{ reservation.habitacion.hotel.nombre }} (<span>{{
+                            reservation.habitacion.hotel.ciudad }}</span>)</h5>
+                    <h5 class="my-3">{{ reservation.habitacion.tipo.nombre }}</h5>
+                    <h5 class="my-3">$ {{ reservation.habitacion.precio }} / noche</h5>
+                    <h5 class="my-3"><i class="fas fa-calendar-alt"></i> {{ reservation.fecha_ingreso }} - <i
+                            class="fas fa-calendar-alt"></i> {{ reservation.fecha_salida }}</h5>
+                    <h5 class="my-3">{{ reservation.habitacion.hotel.estrellas }} <i
+                            class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ reservation.huespedes }} <i
+                            class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;<span
+                            *ngIf="reservation.habitacion.minibar == 1"><i class="fas fa-wine-bottle"></i>
+                            minibar</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

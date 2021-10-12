@@ -1,1 +1,72 @@
-<p>home works!</p>
+<script>
+    var cont = 0
+    function cambia() {
+        cont++;
+        switch (cont % 4 + 1) {
+            case 1:
+                document.getElementById("fotocambia").src = "assets/imagenes/buca1.jpg";
+                break;
+            case 2:
+                document.getElementById("fotocambia").src = "assets/imagenes/buca2.jpg";
+                break;
+            case 3:
+                document.getElementById("fotocambia").src = "assets/imagenes/sol.jpg";
+                break;
+            case 4:
+                document.getElementById("fotocambia").src = "assets/imagenes/dan.jpg";
+                break;
+        }
+
+    }
+    function inicio() {
+        setInterval(cambia, 3000);
+    }
+    window.onload = inicio;
+</script>
+
+
+<div id="contenido">
+    <hr class="m-0">
+    <br>
+    <div class="row">
+        <div class="col-8 px-0">
+            <div id="section">
+                
+                    <a href="html/buscar.html">
+                    <img id="fotocambia" src="assets/imagenes/bucaramanga.jpg" width="800px" height="400px" alt="bucaramanga"></a>
+            </div>
+        </div>
+        <div class="col pox-0" id="prueb" style="border: double;">
+            <h3>sitios turísticos</h3>
+                <div class="row">
+                    <div class="col">
+                        <img class="izq" src="assets/imagenes/catedralSagradaFlia.jpg" width="100%" height="30%" alt="Catedral Metropolitana de la Sagrada Familia">
+
+                    <aside>
+                        <h2><b>Catedral Metropolitana de la Sagrada Familia</b></h2>
+            
+                Es uno de los templos religiosos más importantes de la ciudad, su imponente 
+                infraestructura que incluye una cúpula amarilla y verde, ocupa un espacio total 
+                de 72,20 m de largo y 32,50 de ancho. La catedral comprende tres cuerpos: un altar 
+                mayor con una altura interior de 11,73 m, y dos altares laterales. Además, tiene 10 
+                columnas en las naves laterales con acceso directo a la calle. El techo se realizó 
+                a través de un acabado artesanal en estuco y metal.
+        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <img src="assets/imagenes/parqueSantander.jpg" width="100%" height="30%" alt="Parque Santander">
+
+                        <h2><b>Parque Santander</b></h2>
+                
+                                Es un lugar histórico, oficialmente se inaugura en 1925. Es un parque que presenta una serie de caminos para poder dar un paseo, sentarse y también admirar el entorno natural con el que se encuentran los visitantes. Se construyó para homenajear al llamado Hombre de las Leyes Francisco de Paula Santander y este lugar se le conoce como parque o Plaza Santander. Además de la variedad de flora de este parque es interesante destacar alguna que otra fuente, esculturas.
+
+                        </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
