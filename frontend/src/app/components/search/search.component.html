@@ -91,7 +91,7 @@
                     <div class="col-8">
                         <h5 class="my-3">{{ result.hotel.nombre }} (<span>{{ result.hotel.ciudad }}</span>)</h5>
                         <h5 class="my-3">{{ result.tipo.nombre }}</h5>
-                        <h5 class="my-3">$ {{ result.precio }} / noche</h5>
+                        <h5 class="my-3">$ {{ result.hotel.precio }} / noche</h5>
                         <h5 class="my-3">{{ result.hotel.estrellas }} <i
                                 class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ result.capacidad }} <i
                                 class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;<span *ngIf="result.minibar == 1"><i

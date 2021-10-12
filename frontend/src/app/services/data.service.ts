@@ -28,11 +28,11 @@ export class DataService {
     let params = new HttpParams();
     params = params.append('text', text);
 
-    return this.http.get(this.API + '/habitacion/search', { params: params });
+    return this.http.get(this.API + '/Habitacion/search', { params: params });
   }
 
   filter(data: Object): Observable<any> {
-    return this.http.post(this.API + '/habitacion/filter', data);
+    return this.http.get(this.API + '/Habitacion/filter', data);
   }
 
   getTokenHeader(){
