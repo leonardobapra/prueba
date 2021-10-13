@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
+
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -24,6 +26,7 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
   }
 
   search() {
@@ -31,12 +34,13 @@ export class SearchComponent implements OnInit {
     this.data.search(this.searchText).subscribe(function (res) {
       ctx.results = res as Array<any>;
     })
+    
   }
 
   piso(event: any) {
     let ctx = this;
 
-    let data = {
+    let data= {
       filter: 'piso',
       min: this.minFloor,
       max: this.maxFloor

@@ -8,6 +8,7 @@ use App\Models\Reserva;
 use Illuminate\Support\Facades\Hash;
 use JWTAuth;
 
+
 class ClienteController extends Controller
 {
    
@@ -47,8 +48,10 @@ class ClienteController extends Controller
         $cliente = Cliente::where('correo', $credentials['correo'])->first();
         if(Hash::check($credentials['clave'], $cliente['clave'])){
             $token = JWTAuth::fromUser($cliente);
+            
         }else{
             returnresponse()->json(['error' => 'Credenciales Inválidas!!'], 400);
+           
         }
         return array('token' => $token);
 
