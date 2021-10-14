@@ -57,15 +57,14 @@
         <h1 class="text-center"><b>RESERVA...</b></h1>
         <h4 class="text-center p-4"><b>Haga su reserva de la habitación en minutos</b></h4>
         <div class="section">
-            <div class="card row" [formGroup]="form">
+            <div class="card row" [formGroup]="form" id="colorform">
                 <div class="col-12">
                     <div class="row">
                         <div class="form-goup col-8">
-                            <p>
-                                <label for="habitacion_id" class="col-form-label">Numero de Habitación:</label>
-                                <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
-                                    placeholder="Numero de Habitación" name="habitacion_id" id="habitacion_id" formControlName="habitacion_id">
-                            </p>
+                                <p>
+                                    <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required="" [(ngModel)]="id"
+                                        name="habitacion_id" id="habitacion_id" formControlName="habitacion_id" hidden>
+                                </p>
                         </div>
                     </div>
                     <div class="row">
@@ -150,7 +149,7 @@
                 </div>
                 <br>
                 <div class="col">
-                    <select id="stars" class="form-control" [(ngModel)]="califica" hidden>
+                    <select id="stars" class="form-control" formControlName="calificacion" [(ngModel)]="califica" hidden>
                         <option value="0">Seleccione</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -160,14 +159,14 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida"
-                        formControlName="com_salida" cols="35" rows="3"  [(ngModel)]="comment_out"
+                    <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida" 
+                        formControlName="com_salida" cols="35" rows="3" [(ngModel)]="comment_out"
                         placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento" hidden></textarea>
                 </div>
                 <div class="form-group">
                     <br>
                     <p>
-                        <button href="rhistory" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar Reserva</button>&nbsp;&nbsp;
+                        <button type="submit" class="btn btn-primary" (click)="reservation()">Confirmar Reserva</button>&nbsp;&nbsp;
                         <button type="reset" class="btn btn-danger">Cancelar</button>
                     </p>
                 </div>

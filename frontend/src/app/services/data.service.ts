@@ -21,6 +21,10 @@ export class DataService {
     return this.http.post(this.API+'/Cliente/update', data, { headers: this.getTokenHeader() });
   }
 
+  // deleteClient(data: Object): Observable<any> {
+  //   return this.http.delete(this.API + '/Cliente/eliminar', data, { headers: this.getTokenHeader() });
+  // }
+
   updateReservations(data: Object): Observable<any> {
     return this.http.post(this.API + '/Reservacion/updateR', data, { headers: this.getTokenHeader() });
   }

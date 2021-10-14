@@ -31,6 +31,12 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  // delete() {
+  //   this.data.deleteClient(this.form.value).subscribe(function (res) {
+  //     console.log(res);
+  //   });
+  // }
+
   // getReservations(){
   //   let ctx = this;
   //   this.data.getReservations().subscribe(function(res){
