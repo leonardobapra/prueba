@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -19,15 +20,16 @@ export class ProfileComponent implements OnInit {
   // reservations: any[] = [];
 
 
-  constructor(private data:DataService) { }
+  constructor(private data:DataService, private router:Router) { }
 
   ngOnInit(): void {
     // this.getReservations();
   }
 
   update(){
-    this.data.updateClient(this.form.value).subscribe(function(res){
+    this.data.updateClient(this.form.value).subscribe((res) =>{
       console.log(res);
+      this.router.navigate(['hlogeado']);
     });
   }
 
