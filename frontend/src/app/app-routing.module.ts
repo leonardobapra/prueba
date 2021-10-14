@@ -7,6 +7,7 @@ import { ReservationComponent } from './components/reservation/reservation.compo
 import { HomeComponent } from './components/home/home.component';
 import { RhistoryComponent } from './components/rhistory/rhistory.component';
 import { SearchComponent } from './components/search/search.component';
+import { HlogeadoComponent } from './components/hlogeado/hlogeado.component';
 /* import { Historial-ReservasComponent } from './components/home/historial-reservas.component'; */
 
 const routes: Routes = [ 
@@ -17,6 +18,7 @@ const routes: Routes = [ 
   { path: 'rhistory', component: RhistoryComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'hlogeado', component: HlogeadoComponent },
   
 /*   { path: 'historial-reservas', component: Historial-ReservasComponent }, */
 

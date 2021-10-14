@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { RhistoryComponent } from './components/rhistory/rhistory.component';
 import { SearchComponent } from './components/search/search.component';
+import { HlogeadoComponent } from './components/hlogeado/hlogeado.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './components/search/search.component';
     HomeComponent,
     ReservationComponent,
     RhistoryComponent,
-    SearchComponent
+    SearchComponent,
+    HlogeadoComponent
   ],
   imports: [
     BrowserModule,
