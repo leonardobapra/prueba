@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservation',
@@ -22,18 +23,20 @@ export class ReservationComponent implements OnInit {
     com_salida: new FormControl('')
 
   });
+ 
   
   constructor(
-    private data: DataService
+    private data: DataService, private router:Router
     ) { }
 
   ngOnInit(): void {
   }
 
   reservation() {
-    this.data.reservation(this.form.value).subscribe(function (res) {
+    this.data.reservation(this.form.value).subscribe( (res) => {
       console.log(res);
-
+      this.router.navigate(['rhistory']);
+      
     });
 }
 }
