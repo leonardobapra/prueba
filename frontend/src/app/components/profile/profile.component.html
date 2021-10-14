@@ -1,35 +1,35 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+    id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
-        <!-- <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-            <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-        </div> -->
-        <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
-            id="content_header">
-            <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+        <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+            <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+        </div>
+        <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+            <header
+                class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
                 id="header">
-                <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-                    <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
                 <div class="row m-0 p-0">
                     <div class="w-75 text-center d-flex align-items-center justify-content-center">
                         <h1 id="title">SANREST</h1>
                     </div>
-                    <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                    <div class="w-25 d-flex justify-content-end d-flex align-items-end p-0 m-0" id="login">
                         <div class="row container-fluid m-0 p-0">
-                            <div class="col-12 m-0 p-0 d-flex justify-content-end" class="input-group">
-                                <ul>
-                                    <li><a href="home">
-                                            <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar
-                                                sesión</button>
-                                            <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login"
-                                                for="cerrar">&nbsp;
-                                        </a></li>
-                                </ul>
-                                <ul class="nav justify-content-center d-flex align-items-center">
-                                    <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
-                                    </li>
-                                    <li><span><b>Usuario</b></span></li>
-                                </ul>
+                            <div class="col-12 m-0 p-0">
+                                <div class="row m-0 p-0" class="input-group">
+                                    <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                        <ul>
+                                            <li><a href="home">
+                                                    <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar sesión</button>
+                                                    <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login" for="cerrar">&nbsp;
+                                                </a></li>
+                                        </ul>
+                                        <ul class="nav justify-content-center d-flex align-items-center">
+                                            <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
+                                            </li>
+                                            <li><span><b>Usuario</b></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,6 +40,7 @@
                     <div class="col-12 d-flex justify-content-start" id="nav">
                         <ul>
                             <li><a href="hlogeado">Inicio</a></li>
+                            <li><a href="search">Busqueda</a></li>
                             <li><a href="rhistory">Mis Reservas</a></li>
                             <li><a href="profile">Mi Perfil</a></li>
                         </ul>
@@ -48,33 +49,34 @@
             </nav>
         </div>
     </div>
-<div class="container">
-    <div class="card p-4 col-8 offset-2 mt-5" id="update-user-form" [formGroup]="form">
-        <h2 class="my-4 text-center fw-bold">Actualización de datos</h2>
-        <div class="row my-4">
-            <div class="col">
-                <label for="doc" class="form-label fw-bold">Nombre: </label>
-                <input type="text" class="form-control" id="name" formControlName="nombres">
+    <div class="container">
+        <div class="card p-4 col-8 offset-2 mt-5" id="update-user-form" [formGroup]="form">
+            <h1 class="my-4 text-center fw-bold">Actualización de datos...</h1> 
+            <div class="row my-4">
+                <div class="col">
+                    <label for="doc" class="form-label fw-bold">Nombre: </label>
+                    <input type="text" class="form-control" id="name" formControlName="nombres">
+                </div>
+                <div class="col">
+                    <label for="doc" class="form-label fw-bold">Apellidos: </label>
+                    <input type="text" class="form-control" id="lastname" formControlName="apellidos">
+                </div>
             </div>
-            <div class="col">
-                <label for="doc" class="form-label fw-bold">Apellidos: </label>
-                <input type="text" class="form-control" id="lastname" formControlName="apellidos">
+            <div class="row my-4">
+                <div class="col">
+                    <label for="doc" class="form-label fw-bold">Correo: </label>
+                    <input type="text" class="form-control" id="email" formControlName="correo">
+                </div>
+                <div class="col">
+                    <label for="doc" class="form-label fw-bold">Contraseña: </label>
+                    <input type="password" class="form-control" id="password" formControlName="clave">
+                </div>
             </div>
-        </div>
-        <div class="row my-4">
-            <div class="col">
-                <label for="doc" class="form-label fw-bold">Correo: </label>
-                <input type="text" class="form-control" id="email" formControlName="correo">
+            <div class="row my-4">
+                <div class="text-center">
+                    <button class="btn btn-primary" (click)="update()">Actualizar datos</button>
+                </div>                
             </div>
-            <div class="col">
-                <label for="doc" class="form-label fw-bold">Contraseña: </label>
-                <input type="password" class="form-control" id="password" formControlName="clave">
-            </div>
-        </div>
-        <div class="row my-4">
-            <div class="text-center">
-                <button class="btn btn-primary" (click)="update()">Actualizar datos</button>
-            </div>                
         </div>
     </div>
 </div>
