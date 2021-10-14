@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent implements OnInit {
+
+  comment_out: string = "Sin comentarios";
+  califica: number = 0;
   
   form = new FormGroup({
     habitacion_id: new FormControl(''),

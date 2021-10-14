@@ -1,5 +1,4 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
-    id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
         <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
             <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
@@ -150,34 +149,25 @@
                     <strong>Por favor:</strong> Sea lo mas descriptivo posible.
                 </div>
                 <br>
-
-                <div class="row">
-                    <div class="form-group col-8">
-                        <p>
-                            <label for="genero" class="col-form-label">Seleccione el género con el que se identifica:</label>
-                            <select required type="number" class="form-select shadow bg-body rounded border-primary" id="genero" name="genero"
-                                formControlName="genero">
-                                <option selected disabled value="">Selecciona...</option>
-                                <option value="1">Hombre</option>
-                                <option value="2">Mujer</option>
-                                <option value="3">Otro</option>
-                            </select>
-                        </p>
-                    </div>
+                <div class="col">
+                    <select id="stars" class="form-control" [(ngModel)]="califica" hidden>
+                        <option value="0">Seleccione</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                 </div>
-                <br>
                 <div class="form-group">
-                    <p><label for="com_salida" class="field-label"><strong>Cuentenos su Experiencia:</strong> </label></p>
                     <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida"
-                        formControlName="com_salida" cols="35" rows="3" 
-                        placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento" ></textarea>
-                    <strong>Por favor:</strong> Sea lo mas descriptivo posible.
+                        formControlName="com_salida" cols="35" rows="3"  [(ngModel)]="comment_out"
+                        placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento" hidden></textarea>
                 </div>
                 <div class="form-group">
                     <br>
                     <p>
-                        <button href="historalReservas.html" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar
-                            Reserva</button>&nbsp;&nbsp;
+                        <button href="rhistory" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar Reserva</button>&nbsp;&nbsp;
                         <button type="reset" class="btn btn-danger">Cancelar</button>
                     </p>
                 </div>
