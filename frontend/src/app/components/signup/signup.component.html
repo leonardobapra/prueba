@@ -1,95 +1,174 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+    id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
-     <!--  <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-        <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-      </div> -->
-      <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu" id="content_header">
-        <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
-          id="header">
-          <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-            <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+        <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+            <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
         </div>
-          <div class="row m-0 p-0">
-            <div class="w-75 text-center d-flex align-items-center justify-content-center">
-              <h1 id="title">SANREST</h1>
-            </div>
-            <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
-              <div class="row container-fluid m-0 p-0">
-                <div class="col-12 m-0 p-0">
-                  <div class="row m-0 p-0" class="input-group">
-                   <!--  <div class="col-12 m-0 p-0 d-flex justify-content-end">
-                      <ul>
-                        <li><a href="login">
-                            <button type="submit" class="btn btn-success btn-sm" id="ingreso">Ingresar</button>
-                            <img src="assets/imagenes/login.png" width="30px" alt="login" for="ingreso">&nbsp;
-                          </a></li>
-                      </ul>
-                      <ul>
-                        <li><a href="signup">
-                            <button type="submit" class="btn btn-success btn-sm" id="Registrarse">Registrarse</button>
-                            <img src="assets/imagenes/register.png" width="30px" alt="Registrarse" for="Registrarse"></a></li>
-                      </ul>
-                    </div> -->
-                  </div>
+        <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+            <header
+                class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                id="header">
+                <div class="row m-0 p-0">
+                    <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                        <h1 id="title">SANREST</h1>
+                    </div>
+                    <div class="w-25 d-flex justify-content-end d-flex align-items-end p-0 m-0" id="login">
+                        <div class="row container-fluid m-0 p-0">
+                            <div class="col-12 m-0 p-0">
+                                <div class="row m-0 p-0" class="input-group">
+                                    <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                        <ul>
+                                          <li><a href="login">
+                                              <button type="submit" class="btn btn-success btn-sm" id="ingreso">Ingresar</button>
+                                              <img src="assets/imagenes/login.png" width="30px" alt="login" for="ingreso">&nbsp;
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <nav class="h-25 nav-item">
-          <div class="row m-0 p-0">
-            <div class="col-12 d-flex justify-content-start" id="nav">
-              <ul>
-                <li><a href="../home">Inicio</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+            </header>
+            <nav class="h-25 nav-item">
+                <div class="row m-0 p-0">
+                    <div class="col-12 d-flex justify-content-start" id="nav">
+                        <ul>
+                            <li><a href="home">Inicio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
 <div class="container">
     <hr class="m-0">
     <br>
     <h1 class="text-center"><b>REGISTRO</b></h1>
     <h5 class="text-center p-4"><b>Llene todos los campos para realizar el registro:</b></h5>
-    
-</div>
-<div class="my-5 card col-8 offset-2" [formGroup]="form">
-    <div class="my-5">
-        <h2 class="text-center"><strong>Formulario de registro</strong></h2>
+    <div class="section">
+      <div class="my-5 card col-8 offset-2" [formGroup]="form" id="colorform">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <p>
+                            <label for="nombres" class="col-form-label">Ingrese sus Nombres:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ana María" id="nombres" name="nombres" formControlName="nombres">
+                        </p>
+                    </div>
+                    <div class="row col-6">
+                        <p>
+                            <label for="apellidos" class="col-form-label">Ingrese sus Apellidos:</label>
+                            <input type="text" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Rodriguez Perez" id="apellidos" name="apellidos" formControlName="apellidos">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="w-50">
+                        <p>
+                            <label for="doc" class="col-form-label">Ingrese el número de su documento de identidad:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="0000000000" id="doc" name="doc" min="0000000000" max="9999999999" formControlName="doc">
+                        </p>
+                    </div>
+                    <div class="w-50">
+                        <p>
+                            <label for="genero" class="col-form-label">Seleccione el género con el que se identifica:</label>
+                            <select required type="number" class="form-select shadow bg-body rounded border-primary" id="genero" name="genero" formControlName="genero">
+                                <option selected disabled value="">Selecciona...</option>
+                                <option value="1">Hombre</option>
+                                <option value="2">Mujer</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>
+                            <label for="correo" class="col-form-label">Direccion de Correo Electronico:</label>
+                            <input type="email" class="form-control shadow bg-body rounded border-primary" required="" placeholder="ejemplo@gmail.com" id="correo" name="correo" formControlName="correo">
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p>
+                            <label for="celular" class="col-form-label">Telefono / Celular:</label>
+                            <input type="number" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Numero de telefono / Celular" id="celular" name="celular" min="0000000000" max="9999999999" formControlName="celular">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                      <div class="col-6">
+                        <p>
+                            <label for="clave" class="col-form-label">Contraseña:</label>
+                            <input type="password" class="form-control shadow bg-body rounded border-primary" required="" placeholder="Ingrese contraseña" id="clave" name="clave" formControlName="clave">
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row justify-content-center">
+                    <h5 class="text-center p-3"><b>TÉRMINOS Y CONDICIONES:</b></h5>
+                    <div class="form-floating col-8">
+                        <textarea class="form-control" id="floatingTextarea" disabled="" style="height: 200px">
+AUTORIZACIÓN PARA EL TRATAMIENTO DE DATOS PERSONALES
+
+El usuario registrado será el responsable del tratamiento de datos y, en tal virtud, podrá recolectar, almacenar, usar y actualizar para las siguientes finalidades: Solicitar cambio de datos, Solicitar retiro de datos.
+Advertencia: Cada finalidad que usted incluya en este formato debe contar con un mecanismo que le permita al Titular seleccionar por separado si acepta o no que se efectúe ese tratamiento particular.
+Manifiesto que me informaron que en caso de recolección de mi información sensible tengo derecho a contestar o no las preguntas que me formulen y a entregar o no los datos solicitados.
+Entiendo que son datos sensibles aquellos que afectan la intimidad del Titular o cuyo uso indebido puede generar discriminación como mi orientación sexual.
+Manifiesto que me informaron que los datos sensibles que se recolectarán serán utilizados para las siguientes finalidades: Recolección, almacenamiento, uso y circulación para mejorar los servicios de la empresa y mejorar la experiencia del cliente.
+_____________________________________________________                            
+DERECHOS DEL TITULAR
+                        
+Sus derechos como titular del dato son los previstos en la Constitución y en la Ley 1581 de 2012, especialmente los siguientes:
+
+a) Acceder en forma gratuita a los datos proporcionados que hayan sido objeto de tratamiento.
+
+b) Solicitar la actualización y rectificación de su información frente a datos parciales, inexactos, incompletos,
+fraccionados, que induzcan a error, o a aquellos cuyo tratamiento esté prohibido o no haya sido autorizado.
+
+c) Solicitar prueba de la autorización otorgada.
+
+d) Presentar ante la Superintendencia de Industria y Comercio (SIC) quejas por infracciones a lo dispuesto en la
+normatividad vigente.
+
+e) Revocar la autorización y/o solicitar la supresión del dato, a menos que exista un deber legal o contractual que haga
+imperativo conservar la información.
+
+f) Abstenerse de responder las preguntas sobre datos sensibles o sobre datos de las niñas y niños y adolescentes.
+
+
+Por todo lo anterior, he otorgado mi consentimiento a SANRES para que trate mi información personal de acuerdo con la Política de Tratamiento de Datos Personales dispuesta por la ley colombiana, la cual puede ser revisada en:
+https://www.sic.gov.co/sites/default/files/files/Nuestra_Entidad/Publicaciones/Cartilla_formatos_datos_Personales_nov22.pdf
+                        
+Manifiesto que la presente autorización me fue solicitada y puesta de presente antes de entregar mis datos y que la suscribo de forma libre y voluntaria una vez leída en su totalidad.
+                        </textarea>
+                    </div>
+                </div>
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required="" value="TermsyConditions" id="TermsyConditions">
+                                <label class="form-check-label" for="TermsyConditions">
+                                    <strong>Acepto los términos y Condiciones</strong> 
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <div class="form-group">
+                    <br>
+                    <p>
+                        <button class="btn btn-primary" (click)="signup()">Registrar</button>&nbsp;&nbsp;
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Documento: </label>
-        <input type="number" name="doc" id="doc" class="form-control" formControlName="doc">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Nombre: </label>
-        <input type="text" name="name" id="name" class="form-control" formControlName="nombres">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Apellidos: </label>
-        <input type="text" name="lastname" id="lastname" class="form-control" formControlName="apellidos">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Celular: </label>
-        <input type="number" name="celular" id="celular" class="form-control" formControlName="celular">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Correo: </label>
-        <input type="text" name="email" id="email" class="form-control" formControlName="correo">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Genero: </label>
-        <input type="text" name="genero" id="genero" class="form-control" formControlName="genero">
-    </div>
-    <div class="my-3 col-6 offset-3">
-        <label for="doc" class="form-label fw-bold">Contraseña: </label>
-        <input type="password" name="password" id="password" class="form-control" formControlName="clave">
-    </div>
-    <div class="my-3 d-flex justify-content-center">
-        <button class="btn btn-primary" (click)="signup()">registrame</button>
-    </div>        
 </div>
 
 

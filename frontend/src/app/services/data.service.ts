@@ -20,6 +20,11 @@ export class DataService {
   updateClient(data:Object):Observable<any>{
     return this.http.post(this.API+'/Cliente/update', data, { headers: this.getTokenHeader() });
   }
+
+  updateReservations(data: Object): Observable<any> {
+    return this.http.post(this.API + '/Reservacion/updateR', data, { headers: this.getTokenHeader() });
+  }
+
   getReservations():Observable<any>{
     return this.http.get(this.API+'/Reservacion/history', { headers: this.getTokenHeader() });
   }

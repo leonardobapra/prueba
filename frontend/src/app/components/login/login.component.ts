@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
       let token = res['token'];
       localStorage.setItem('token', token);
       this.router.navigate(['hlogeado']);
-      
         
       
     });

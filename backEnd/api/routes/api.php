@@ -39,5 +39,6 @@ Route::group(['middleware' =>['jwt.verify']], function(){
     Route::get('/Reservacion/history', [ReservaController::class, 'showByCliente']);
     Route::delete('/Cliente/eliminar', [ClienteController::class, 'eliminar']);
     Route::delete('/Reserva/eliminarR', [ReservaController::class, 'eliminarR']);
+    Route::post('/Reservacion/updateR', [ReservaController::class, 'updateR']);
 });
 });

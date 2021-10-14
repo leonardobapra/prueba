@@ -84,6 +84,10 @@ body{
     display: table;
 }
 
+#colorform{
+    background-color: transparent;
+}
+
 #nav{
     background-image: radial-gradient(circle at 40% 60%, rgb(28, 201, 192)  0,#029c6e 100%);
     opacity: 95%;

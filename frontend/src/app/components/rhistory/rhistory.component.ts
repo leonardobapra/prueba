@@ -9,6 +9,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class RhistoryComponent implements OnInit {
 
+  form = new FormGroup({
+    calificacion: new FormControl(''),
+    com_salida: new FormControl('')
+  });
+
   constructor(private data: DataService) { }
 
   reservations: any[] = [];
@@ -20,6 +25,12 @@ export class RhistoryComponent implements OnInit {
     let ctx = this;
     this.data.getReservations().subscribe(function (res) {
       ctx.reservations = res as Array<any>;
+    });
+  }
+
+  updateR() {
+    this.data.updateReservations(this.form.value).subscribe(function (res) {
+      console.log(res);
     });
   }
 }

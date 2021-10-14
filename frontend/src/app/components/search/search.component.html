@@ -1,56 +1,54 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+    id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
-      <!-- <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-        <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-      </div> -->
-      <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu" id="content_header">
-        <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
-          id="header">
-          <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-            <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+        <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+            <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
         </div>
-          <div class="row m-0 p-0">
-            <div class="w-75 text-center d-flex align-items-center justify-content-center">
-              <h1 id="title">SANREST</h1>
-            </div>
-            <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
-              <div class="row container-fluid m-0 p-0">
-                <div class="col-12 m-0 p-0">
-                  <div class="row m-0 p-0" class="input-group">
-                    <!-- <div class="col-12 m-0 p-0 d-flex justify-content-end">
-                      <ul>
-                        <li><a href="login">
-                            <button type="submit" class="btn btn-success btn-sm" id="ingreso">Ingresar</button>
-                            <img src="assets/imagenes/login.png" width="30px" alt="login" for="ingreso">&nbsp;
-                          </a></li>
-                      </ul>
-                      <ul>
-                        <li><a href="signup">
-                            <button type="submit" class="btn btn-success btn-sm" id="Registrarse">Registrarse</button>
-                            <img src="assets/imagenes/register.png" width="30px" alt="Registrarse" for="Registrarse"></a></li>
-                      </ul>
-                    </div> -->
-                  </div>
+        <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+            <header
+                class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+                id="header">
+                <div class="row m-0 p-0">
+                    <div class="w-75 text-center d-flex align-items-center justify-content-center">
+                        <h1 id="title">SANREST</h1>
+                    </div>
+                    <div class="w-25 d-flex justify-content-end d-flex align-items-end p-0 m-0" id="login">
+                        <div class="row container-fluid m-0 p-0">
+                            <div class="col-12 m-0 p-0">
+                                <div class="row m-0 p-0" class="input-group">
+                                    <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                        <ul>
+                                            <li><a href="home">
+                                                    <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar sesión</button>
+                                                    <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login" for="cerrar">&nbsp;
+                                                </a></li>
+                                        </ul>
+                                        <ul class="nav justify-content-center d-flex align-items-center">
+                                            <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
+                                            </li>
+                                            <li><span><b>Usuario</b></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </header>
-        <nav class="h-25 nav-item">
-          <div class="row m-0 p-0">
-            <div class="col-12 d-flex justify-content-start" id="nav">
-              <ul>
-                <li><a href="home">Inicio</a></li>
-                <li><a href="search">Busqueda</a></li>
-                <li><a href="reservation">Reservar</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+            </header>
+            <nav class="h-25 nav-item">
+                <div class="row m-0 p-0">
+                    <div class="col-12 d-flex justify-content-start" id="nav">
+                        <ul>
+                            <li><a href="hlogeado">Inicio</a></li>
+                            <li><a href="search">Busqueda</a></li>
+                            <li><a href="rhistory">Mis Reservas</a></li>
+                            <li><a href="profile">Mi Perfil</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
-<div>
     <div class="container-fluid">
         <div class="row mt-5 mb-4">
             <div class="col-6 offset-3">
@@ -137,17 +135,26 @@
         <div class="row col-6 offset-3">
             <div class="card result p-3 my-3" *ngFor="let result of results">
                 <div class="row" id="result-1">
-                    <div class="col-4 d-flex align-items-center">
-                        <img src="https://picsum.photos/175" alt="foto resultado 1" class="img-fluid rounded">
+                    <div class="col-3 d-flex align-items-center">
+                        <img src="https://picsum.photos/id/1008/175" alt="foto resultado 1" class="img-fluid rounded">
                     </div>
-                    <div class="col-8">
+                    <div class="col-7">
+                        <h5 class="my-3">{{ result.id }} </h5>
                         <h5 class="my-3">{{ result.hotel.nombre }} (<span>{{ result.hotel.ciudad }}</span>)</h5>
-                        <!-- <h5 class="my-3">{{ result.tipo.nombre }}</h5> -->
+                        <h5 class="my-3">{{ result.tipo.nombre }}</h5>
                         <h5 class="my-3">$ {{ result.precio }} / noche</h5>
-                        <h5 class="my-3">{{ result.hotel.estrellas }} <i
-                                class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ result.capacidad }} <i
-                                class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;<span *ngIf="result.minibar == 1"><i
-                                    class="fas fa-wine-bottle"></i> minibar</span></h5>
+                        <h5 class="my-3">{{ result.hotel.estrellas }} 
+                        <i class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ result.capacidad }} 
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.minibar == 1">
+                        <i class="fas fa-wine-bottle"></i> minibar</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.balcon == 1">
+                        <i class="fas fa-archway"></i> Balcón</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="result.jacuzzi == 1">
+                        <i class="fas fa-bath"></i> Jacuzzi</span></h5>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                        <a href="reservation"><button type="submit" class="btn btn-primary btn-sm" id="ingreso">Reservar</button></a>
                     </div>
                 </div>
             </div>
