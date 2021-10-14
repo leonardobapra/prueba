@@ -1,35 +1,38 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+    id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
-        <!-- <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-            <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-        </div> -->
-        <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
-            id="content_header">
-            <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+        <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+            <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+        </div>
+        <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+            <header
+                class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
                 id="header">
-                <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-                    <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
                 <div class="row m-0 p-0">
                     <div class="w-75 text-center d-flex align-items-center justify-content-center">
                         <h1 id="title">SANREST</h1>
                     </div>
-                    <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                    <div class="w-25 d-flex justify-content-end d-flex align-items-end p-0 m-0" id="login">
                         <div class="row container-fluid m-0 p-0">
-                            <div class="col-12 m-0 p-0 d-flex justify-content-end" class="input-group">
-                                <ul>
-                                    <li><a href="home">
-                                            <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar
-                                                sesión</button>
-                                            <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login"
-                                                for="cerrar">&nbsp;
-                                        </a></li>
-                                </ul>
-                                <ul class="nav justify-content-center d-flex align-items-center">
-                                    <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
-                                    </li>
-                                    <li><span><b>Usuario</b></span></li>
-                                </ul>
+                            <div class="col-12 m-0 p-0">
+                                <div class="row m-0 p-0" class="input-group">
+                                    <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                        <ul>
+                                            <li><a href="home">
+                                                    <button type="submit" class="btn btn-success btn-sm"
+                                                        id="cerrar">Cerrar sesión</button>
+                                                    <img src="assets/imagenes/cerrar-sesion.png" width="30px"
+                                                        alt="login" for="cerrar">&nbsp;
+                                                </a></li>
+                                        </ul>
+                                        <ul class="nav justify-content-center d-flex align-items-center">
+                                            <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px"
+                                                    height="45px">
+                                            </li>
+                                            <li><span><b>Usuario</b></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,6 +43,7 @@
                     <div class="col-12 d-flex justify-content-start" id="nav">
                         <ul>
                             <li><a href="hlogeado">Inicio</a></li>
+                            <li><a href="search">Busqueda</a></li>
                             <li><a href="rhistory">Mis Reservas</a></li>
                             <li><a href="profile">Mi Perfil</a></li>
                         </ul>
@@ -48,129 +52,135 @@
             </nav>
         </div>
     </div>
-<div class="container">
-    <hr class="m-0">
-    <br>
-    <h1 class="text-center"><b>RESERVA...</b></h1>
-    <h4 class="text-center p-4"><b>Haga su reserva de la habitación en minutos</b></h4>
-    <div class="section">
-        <div class="card row" [formGroup]="form">
-            <div class="col-12">
-                <div class="row">
-                    <div class="form-goup col-8">
-                        <p>
-                            <label for="habitacion_id" class="col-form-label">Numero de Habitación:</label>
-                            <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
-                                placeholder="Numero de Habitación" name="habitacion_id" id="habitacion_id" formControlName="habitacion_id">
-                        </p>
+    <div class="container">
+        <hr class="m-0">
+        <br>
+        <h1 class="text-center"><b>RESERVA...</b></h1>
+        <h4 class="text-center p-4"><b>Haga su reserva de la habitación en minutos</b></h4>
+        <div class="section">
+            <div class="card row" [formGroup]="form">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="form-goup col-8">
+                            <p>
+                                <label for="habitacion_id" class="col-form-label">Numero de Habitación:</label>
+                                <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
+                                    placeholder="Numero de Habitación" name="habitacion_id" id="habitacion_id" formControlName="habitacion_id">
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="form-goup col-6">
-                        <p>
-                            <label for="cant_adultos" class="col-form-label">Numeros de Adultos:</label>
-                            <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
-                                placeholder="Numeros de Adultos" name="cant_adultos" id="cant_adultos" formControlName="cant_adultos">
-                        </p>
+                    <div class="row">
+                        <div class="form-goup col-6">
+                            <p>
+                                <label for="cant_adultos" class="col-form-label">Numeros de Adultos:</label>
+                                <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
+                                    placeholder="Numeros de Adultos" name="cant_adultos" id="cant_adultos" formControlName="cant_adultos">
+                            </p>
+                        </div>
+                        <div class="form-group col-6">
+                            <p>
+                                <label for="cant_ninos" class="col-form-label">Numero de Niños:</label>
+                                <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
+                                    placeholder="Numero de Niños" name="cant_ninos" id="cant_ninos" formControlName="cant_ninos">
+                            </p>
+                        </div>
                     </div>
-                    <div class="form-group col-6">
-                        <p>
-                            <label for="cant_ninos" class="col-form-label">Numero de Niños:</label>
-                            <input type="number" min="0" class="form-control shadow bg-body rounded border-primary" required=""
-                                placeholder="Numero de Niños" name="cant_ninos" id="cant_ninos" formControlName="cant_ninos">
-                        </p>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <p>
+                                <label for="fecha_ingreso" class="col-form-label">Fecha de Entrada:</label>
+                                <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
+                                    placeholder="dd/mm/yyyy" name="fecha_ingreso" id="fecha_ingreso" formControlName="fecha_ingreso">
+                            </p>
+                        </div>
+                        <div class="form-group col-6">
+                            <p>
+                                <label for="fecha_salida" class="col-form-label">Fecha de Salida:</label>
+                                <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
+                                    placeholder="dd/mm/yyyy" name="fecha_salida" id="fecha_salida" formControlName="fecha_salida">
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-6">
-                        <p>
-                            <label for="fecha_ingreso" class="col-form-label">Fecha de Entrada:</label>
-                            <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
-                                placeholder="dd/mm/yyyy" name="fecha_ingreso" id="fecha_ingreso" formControlName="fecha_ingreso">
-                        </p>
-                    </div>
-                    <div class="form-group col-6">
-                        <p>
-                            <label for="fecha_salida" class="col-form-label">Fecha de Salida:</label>
-                            <input type="date" class="form-control shadow bg-body rounded border-primary" required=""
-                                placeholder="dd/mm/yyyy" name="fecha_salida" id="fecha_salida" formControlName="fecha_salida">
-                        </p>
-                    </div>
-                </div>
-                <hr>
-                <div class="justify-content-center text-start p-4"><span><strong>Por favor responda estas preguntas para
-                            una estadía placentera:</strong></span></div>
+                    <hr>
+                    <div class="justify-content-center text-start p-4"><span><strong>Por favor responda estas preguntas para
+                                una estadía placentera:</strong></span></div>
 
-                <fieldset class="row mb-3">
-                    <div class="form-group col-6 justify-content-center">
-                        <strong>¿Necesita que lo recojamos?<br></strong>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="recogida" id="grecoger1" value=1
-                                required="" formControlName="recogida">
-                            <label class="form-check-label" for="grecoger1">
-                                SI
-                            </label>
+                    <fieldset class="row mb-3">
+                        <div class="form-group col-6 justify-content-center">
+                            <strong>¿Necesita que lo recojamos?<br></strong>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recogida" id="grecoger1" value=1
+                                    required="" formControlName="recogida">
+                                <label class="form-check-label" for="grecoger1">
+                                    SI
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recogida" id="grecoger2" value=0
+                                    required="" formControlName="recogida">
+                                <label class="form-check-label" for="grecoger2">
+                                    NO
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="recogida" id="grecoger2" value=0
-                                required="" formControlName="recogida">
-                            <label class="form-check-label" for="grecoger2">
-                                NO
-                            </label>
+                        <div class="col-sm-6">
+                            <strong>¿Va a traer una Mascota?<br></strong>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mascota" id="grmascota1" value=1
+                                    required="" formControlName="mascota">
+                                <label class="form-check-label" for="grmascota1">
+                                    SI
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mascota" id="grmascota2" value=0
+                                    required="" formControlName="mascota">
+                                <label class="form-check-label" for="grmascota2">
+                                    NO
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <strong>¿Va a traer una Mascota?<br></strong>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mascota" id="grmascota1" value=1
-                                required="" formControlName="mascota">
-                            <label class="form-check-label" for="grmascota1">
-                                SI
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="mascota" id="grmascota2" value=0
-                                required="" formControlName="mascota">
-                            <label class="form-check-label" for="grmascota2">
-                                NO
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
+                    </fieldset>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <p><label for="com_ingreso" class="field-label"><strong>¿Algo más que debamos saber?</strong> </label></p>
+                    <textarea class="form-control shadow bg-body rounded border-primary" name="com_ingreso" id="com_ingreso" formControlName="com_ingreso" cols="35"
+                        rows="3" placeholder="Háganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
+                    <strong>Por favor:</strong> Sea lo mas descriptivo posible.
+                </div>
                 <br>
-            </div>
-            <div class="form-group">
-                <p><label for="com_ingreso" class="field-label"><strong>¿Algo más que debamos saber?</strong> </label></p>
-                <textarea class="form-control shadow bg-body rounded border-primary" name="com_ingreso" id="com_ingreso" formControlName="com_ingreso" cols="35"
-                    rows="3" placeholder="Háganos saber sobre cualquier necesidad de alojamiento especial"></textarea>
-                <strong>Por favor:</strong> Sea lo mas descriptivo posible.
-            </div>
-            <br>
 
-            <div class="row">
-                <div class="form-group col-8">
+                <div class="row">
+                    <div class="form-group col-8">
+                        <p>
+                            <label for="genero" class="col-form-label">Seleccione el género con el que se identifica:</label>
+                            <select required type="number" class="form-select shadow bg-body rounded border-primary" id="genero" name="genero"
+                                formControlName="genero">
+                                <option selected disabled value="">Selecciona...</option>
+                                <option value="1">Hombre</option>
+                                <option value="2">Mujer</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p><label for="com_salida" class="field-label"><strong>Cuentenos su Experiencia:</strong> </label></p>
+                    <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida"
+                        formControlName="com_salida" cols="35" rows="3" 
+                        placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento" ></textarea>
+                    <strong>Por favor:</strong> Sea lo mas descriptivo posible.
+                </div>
+                <div class="form-group">
+                    <br>
                     <p>
-                        <label for="calificacion" class="col-form-label">Calificación [1-5]:</label>
-                        <input type="number" min="0" max="5" class="form-control shadow bg-body rounded border-primary" required=""
-                            placeholder="Calificación" name="calificacion" id="calificacion" formControlName="calificacion">
+                        <button href="historalReservas.html" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar
+                            Reserva</button>&nbsp;&nbsp;
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
                     </p>
                 </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <p><label for="com_salida" class="field-label"><strong>Cuentenos su Experiencia:</strong> </label></p>
-                <textarea class="form-control shadow bg-body rounded border-primary" name="com_salida" id="com_salida"
-                    formControlName="com_salida" cols="35" rows="3"
-                    placeholder="Háganos saber sobre sus sugerencias y observaciones del alojamiento"></textarea>
-                <strong>Por favor:</strong> Sea lo mas descriptivo posible.
-            </div>
-            <div class="form-group">
-                <br>
-                <p>
-                    <button href="historalReservas.html" type="submit" class="btn btn-primary" (click)="reservation()">Confirmar
-                        Reserva</button>
-                    <button type="reset" class="btn btn-danger">Cancelar</button>
-                </p>
             </div>
         </div>
     </div>

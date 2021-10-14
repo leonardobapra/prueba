@@ -1,35 +1,35 @@
-<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0" id="contenedor">
+<div class="border-start border-2 border-secondary border-end border-2 border-secondary container-fluid m-0 p-0"
+    id="contenedor">
     <div class="row border-top border-2 border-secondary border-bottom border-2 border-secondary m-0 p-0">
-        <!-- <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-            <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-        </div> -->
-        <div class="col-11 border-start border-2 border-secondary col-10 nav-item m-0 p-0" class="menu"
-            id="content_header">
-            <header class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
+        <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" id="logo">
+            <img src="assets/imagenes/LogoSANRES.png" width="85px" alt="LOGO_SANRES">
+        </div>
+        <div class="col-11 border border-2 border-secondary m-0 p-0" id="content_header">
+            <header
+                class="h-75 border-bottom border-2 border-secondary border-bottom border-2 border-secondary p-0 h-50"
                 id="header">
-                <div class="col-1 justify-content-center d-flex align-items-center m-0 p-2" class="menu" id="logo">
-                    <img src="assets/imagenes//LogoSANRES.png" width="85px" alt="LOGO_SANRES">
-                </div>
                 <div class="row m-0 p-0">
                     <div class="w-75 text-center d-flex align-items-center justify-content-center">
                         <h1 id="title">SANREST</h1>
                     </div>
-                    <div class="w-25 d-flex justify-content-end d-flex align-items-end" id="login">
+                    <div class="w-25 d-flex justify-content-end d-flex align-items-end p-0 m-0" id="login">
                         <div class="row container-fluid m-0 p-0">
-                            <div class="col-12 m-0 p-0 d-flex justify-content-end" class="input-group">
-                                <ul>
-                                    <li><a href="home">
-                                            <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar
-                                                sesión</button>
-                                            <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login"
-                                                for="cerrar">&nbsp;
-                                        </a></li>
-                                </ul>
-                                <ul class="nav justify-content-center d-flex align-items-center">
-                                    <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
-                                    </li>
-                                    <li><span><b>Usuario</b></span></li>
-                                </ul>
+                            <div class="col-12 m-0 p-0">
+                                <div class="row m-0 p-0" class="input-group">
+                                    <div class="col-12 m-0 p-0 d-flex justify-content-end">
+                                        <ul>
+                                            <li><a href="home">
+                                                    <button type="submit" class="btn btn-success btn-sm" id="cerrar">Cerrar sesión</button>
+                                                    <img src="assets/imagenes/cerrar-sesion.png" width="30px" alt="login" for="cerrar">&nbsp;
+                                                </a></li>
+                                        </ul>
+                                        <ul class="nav justify-content-center d-flex align-items-center">
+                                            <li><img src="assets/imagenes/IconHombre.png" alt="Usuario" width="45px" height="45px">
+                                            </li>
+                                            <li><span><b>Usuario</b></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,6 +40,7 @@
                     <div class="col-12 d-flex justify-content-start" id="nav">
                         <ul>
                             <li><a href="hlogeado">Inicio</a></li>
+                            <li><a href="search">Busqueda</a></li>
                             <li><a href="rhistory">Mis Reservas</a></li>
                             <li><a href="profile">Mi Perfil</a></li>
                         </ul>
@@ -48,28 +49,67 @@
             </nav>
         </div>
     </div>
-<div class="container">
-    <div class="col-8 offset-2 mt-5 pt-3">
-        <h2 class="fw-bold text-center">Historial de reservaciones</h2>
-        <div class="card result p-3 my-3" *ngFor="let reservation of reservations">
-            <div class="row" id="result-1">
-                <div class="col-4 d-flex align-items-center">
-                    <img src="https://picsum.photos/175" alt="foto resultado 1" class="img-fluid rounded">
-                </div>
-                <div class="col-8">
-                    <h5 class="my-3">{{ reservation.habitacion.hotel.nombre }} (<span>{{
-                            reservation.habitacion.hotel.ciudad }}</span>)</h5>
-                    <h5 class="my-3">{{ reservation.habitacion.tipo.nombre }}</h5>
-                    <h5 class="my-3">$ {{ reservation.habitacion.precio }} / noche</h5>
-                    <h5 class="my-3"><i class="fas fa-calendar-alt"></i> {{ reservation.fecha_ingreso }} - <i
-                            class="fas fa-calendar-alt"></i> {{ reservation.fecha_salida }}</h5>
-                    <h5 class="my-3">{{ reservation.habitacion.hotel.estrellas }} <i
-                            class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ reservation.huespedes }} <i
-                            class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;<span
-                            *ngIf="reservation.habitacion.minibar == 1"><i class="fas fa-wine-bottle"></i>
-                            minibar</span></h5>
+    <div class="container">
+        <div class="col-12  mt-5 pt-3">
+            <h2 class="fw-bold text-center">Historial de reservaciones</h2>
+            <div class="card result p-3 my-3" *ngFor="let reservation of reservations">
+                    <div class="row" id="result-1">
+                    <div class="col-2 d-flex align-items-center">
+                        <img src="https://picsum.photos/id/1008/175" alt="foto resultado 1" class="img-fluid rounded">
+                    </div>
+                    <div class="col-5">
+                        <h5 class="my-3">{{ reservation.habitacion.hotel.nombre }} (<span>{{ reservation.habitacion.hotel.ciudad }}</span>)</h5>
+                        <h5 class="my-3">{{ reservation.habitacion.tipo.nombre }}</h5>
+                        <h5 class="my-3">$ {{ reservation.habitacion.precio }} / noche</h5>
+                        <h5 class="my-3">{{ reservation.habitacion.hotel.estrellas }} 
+                        <i class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ reservation.habitacion.capacidad }} 
+                        <i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="reservation.habitacion.minibar == 1">
+                        <i class="fas fa-wine-bottle"></i> minibar</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="reservation.habitacion.balcon == 1">
+                        <i class="fas fa-archway"></i> Balcón</span>&nbsp;&nbsp;&nbsp;
+                        <span *ngIf="reservation.habitacion.jacuzzi == 1">
+                        <i class="fas fa-bath"></i> Jacuzzi</span></h5>
+                    </div>
+                    <div class="card p-4 col-5" id="update-reserve-form" [formGroup]="form" id="colorform">
+                        <div class="row p-0 m-0">
+                            <div class="col-10 p-0 m-0">
+                                <div class="row p-0 m-0">
+                                    <div class="col-7 p-0 m-0">
+                                        <h6>Evalúa tu experiencia: </h6>
+                                    </div>
+                                    <div class="col-5 p-0 m-0 d-flex align-items-start">
+                                        <p class="clasificacion">
+                                        <input id="radio1" type="radio" name="calificacion" value="5"><!--
+                                        --><label for="radio1">★</label><!--
+                                        --><input id="radio2" type="radio" name="calificacion" value="4"><!--
+                                        --><label for="radio2">★</label><!--
+                                        --><input id="radio3" type="radio" name="calificacion" value="3"><!--
+                                        --><label for="radio3">★</label><!--
+                                        --><input id="radio4" type="radio" name="calificacion" value="2"><!--
+                                        --><label for="radio4">★</label><!--
+                                        --><input id="radio5" type="radio" name="calificacion" value="1"><!--
+                                        --><label for="radio5">★</label>
+                                    </p>
+                                    </div>
+                                </div>
+                                <div class="row p-0 m-0">
+                                    <div class="col-7 p-0 m-0">
+                                        <h6>Danos tu opinión: </h6>
+                                        <br>
+                                    </div>
+                                    <div class="col-5 p-0 m-0 d-flex align-items-start">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 d-flex align-items-center">
+                            <button class="btn btn-primary" (click)="updateR()">Calificar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
