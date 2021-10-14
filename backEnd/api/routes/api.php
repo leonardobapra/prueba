@@ -27,7 +27,7 @@ Route::group(['middleware' => ['cors']], function(){
 Route::post('/Cliente/signup', [ClienteController::class, 'signup']);
 Route::post('/Cliente/login', [ClienteController::class, 'login']);
 Route::get('/Habitacion/search', [HabitacionController::class, 'search']);
-Route::get('/Habitacion/filter', [HabitacionController::class, 'filter']);
+Route::post('/Habitacion/filter', [HabitacionController::class, 'filter']);
 Route::get('/Hotel/filter', [HotelController::class, 'filter']);
 // Route::get('/TipoHabitacion/filter', [TipoHabitacionController::class, 'filter']);
 Route::post('/Reservacion/createNR', [ReservaController::class, 'createNR']);

@@ -45,7 +45,7 @@ export class DataService {
   }
 
   filter(data: Object): Observable<any> {
-    return this.http.get(this.API + '/Habitacion/filter', data);
+    return this.http.post(this.API + '/Habitacion/filter', data);
   }
 
   getTokenHeader(){
