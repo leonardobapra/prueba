@@ -62,6 +62,7 @@
                         <h5 class="my-3">{{ reservation.habitacion.hotel.nombre }} (<span>{{ reservation.habitacion.hotel.ciudad }}</span>)</h5>
                         <h5 class="my-3">{{ reservation.habitacion.tipo.nombre }}</h5>
                         <h5 class="my-3">$ {{ reservation.habitacion.precio }} / noche</h5>
+                        <h5 class="my-3"><i class="fas fa-calendar-alt"></i> {{ reservation.fecha_ingreso }} - <i class="fas fa-calendar-alt"></i> {{ reservation.fecha_salida }}</h5>
                         <h5 class="my-3">{{ reservation.habitacion.hotel.estrellas }} 
                         <i class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ reservation.habitacion.capacidad }} 
                         <i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;
