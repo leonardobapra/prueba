@@ -11,17 +11,19 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class RhistoryComponent implements OnInit {
 
-  id:number=0;
+  hab_id:number=0;
 
   form = new FormGroup({
     calificacion: new FormControl(''),
     com_salida: new FormControl(''),
-    id: new FormControl(this.id)
+    id: new FormControl(this.hab_id)
   });
+
 
   constructor(private data: DataService, private router: Router, private route: ActivatedRoute) { }
 
   reservations: any[] = [];
+  
 
   ngOnInit(): void {
     this.getReservations();
@@ -36,10 +38,11 @@ export class RhistoryComponent implements OnInit {
   getHab(){
     this.route.params.subscribe((params: Params) => {
       console.log(params)
-      this.id = params.id
+      this.hab_id = params.hab_id
     })
-    return this.id
+    return this.hab_id
   }
+
 
 
   updateR() {
