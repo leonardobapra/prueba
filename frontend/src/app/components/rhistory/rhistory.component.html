@@ -58,6 +58,7 @@
                         <img src="https://picsum.photos/id/1008/175" alt="foto resultado 1" class="img-fluid rounded">
                     </div>
                     <div class="col-5">
+                        <h5 class="my-3">{{ reservation.id }}</h5>
                         <h5 class="my-3">{{ reservation.habitacion.hotel.nombre }} (<span>{{ reservation.habitacion.hotel.ciudad }}</span>)</h5>
                         <h5 class="my-3">{{ reservation.habitacion.tipo.nombre }}</h5>
                         <h5 class="my-3">$ {{ reservation.habitacion.precio }} / noche</h5>

@@ -19,7 +19,8 @@ const routes: Routes = [ 
   { path: 'reservation', component: ReservationComponent },
   { path: 'search', component: SearchComponent },
   { path: 'hlogeado', component: HlogeadoComponent },
-  { path: 'reservation/:id', component: ReservationComponent }
+  { path: 'reservation/:id', component: ReservationComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
   
 /*   { path: 'historial-reservas', component: Historial-ReservasComponent }, */
 
