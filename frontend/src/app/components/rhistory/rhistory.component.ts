@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
-import { Router } from '@angular/router';
-import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-rhistory',
@@ -11,19 +9,15 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class RhistoryComponent implements OnInit {
 
-  hab_id:number=0;
-
   form = new FormGroup({
     calificacion: new FormControl(''),
     com_salida: new FormControl(''),
-    id: new FormControl(this.hab_id)
+    id: new FormControl('')
   });
 
-
-  constructor(private data: DataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private data: DataService) { }
 
   reservations: any[] = [];
-  
 
   ngOnInit(): void {
     this.getReservations();
@@ -34,16 +28,6 @@ export class RhistoryComponent implements OnInit {
       ctx.reservations = res as Array<any>;
     });
   }
-
-  getHab(){
-    this.route.params.subscribe((params: Params) => {
-      console.log(params)
-      this.hab_id = params.hab_id
-    })
-    return this.hab_id
-  }
-
-
 
   updateR() {
     this.data.updateReservations(this.form.value).subscribe(function (res) {
