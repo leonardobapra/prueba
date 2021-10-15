@@ -59,6 +59,7 @@ class ReservaController extends Controller
         $doc = JWTAuth::getPayload($token)->toArray()['sub'];
         /* $history = Reserva::where('doc_cliente',$doc)->get(); */
         $history = Reserva::where('doc_cliente', $doc)->with(['habitacion.hotel', 'habitacion.tipo'])->get();
+ 
         return $history;
     }
     public function eliminarR(Request $request)
