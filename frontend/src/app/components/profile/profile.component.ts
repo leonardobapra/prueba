@@ -16,6 +16,9 @@ export class ProfileComponent implements OnInit {
     correo: new FormControl(''),
     clave: new FormControl('')
   });
+  form1= new FormGroup({
+    clave: new FormControl('')
+  });
 
   // reservations: any[] = [];
 
@@ -33,11 +36,12 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  // delete() {
-  //   this.data.deleteClient(this.form.value).subscribe(function (res) {
-  //     console.log(res);
-  //   });
-  // }
+  delete(){
+   this.data.deleteClient(this.form1.value).subscribe((res) =>{
+     console.log(res);
+     this.router.navigate(['home']);
+   });
+   }
 
   // getReservations(){
   //   let ctx = this;
