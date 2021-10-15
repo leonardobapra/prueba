@@ -85,7 +85,7 @@ class ClienteController extends Controller
     public function eliminar(Request $request)
     {
         $data = $request->all();
-        $data['clave'] = Hash::make($data['clave']);
+        /* $data['clave'] = Hash::make($data['clave']); */
         $token = $request->bearerToken();
         $doc = JWTAuth::getPayload($token)->toArray()['sub'];
       
