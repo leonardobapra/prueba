@@ -11,7 +11,8 @@ export class RhistoryComponent implements OnInit {
 
   form = new FormGroup({
     calificacion: new FormControl(''),
-    com_salida: new FormControl('')
+    com_salida: new FormControl(''),
+    id: new FormControl('')
   });
 
   constructor(private data: DataService) { }

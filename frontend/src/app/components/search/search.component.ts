@@ -19,6 +19,8 @@ export class SearchComponent implements OnInit {
   capacity: number = 0;
   stars: number = 0;
   _minibar: boolean = false;
+  _jacuzzi: boolean = false;
+  _balcon: boolean = false;
 
   results: any[] = [];
 
@@ -98,6 +100,30 @@ export class SearchComponent implements OnInit {
     let data = {
       filter: 'minibar',
       value: this._minibar ? 1 : 0
+    };
+
+    this.data.filter(data).subscribe(function (res) {
+      ctx.results = res as Array<any>;
+    });
+  }
+  jacuzzi() {
+    let ctx = this;
+
+    let data = {
+      filter: 'jacuzzi',
+      value: this._jacuzzi ? 1 : 0
+    };
+
+    this.data.filter(data).subscribe(function (res) {
+      ctx.results = res as Array<any>;
+    });
+  }
+  balcon() {
+    let ctx = this;
+
+    let data = {
+      filter: 'balcon',
+      value: this._balcon ? 1 : 0
     };
 
     this.data.filter(data).subscribe(function (res) {

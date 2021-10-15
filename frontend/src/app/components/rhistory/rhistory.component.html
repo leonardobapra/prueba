@@ -81,6 +81,11 @@
                                         <h6>Evalúa tu experiencia: </h6>
                                     </div>
                                     <div class="col-5 p-0 m-0 d-flex align-items-start">
+                                        <div class="form-group">
+                                            <input class="form-control shadow bg-body rounded border-primary" name="id" id="id" 
+                                                formControlName="id" cols="35" rows="3" [(ngModel)]="reservation.id"
+                                                 hidden>
+                                        </div>
                                         <p class="form-control clasificacion">
                                         <input id="radio1" type="radio" name="calificacion" value="5" formControlName="calificacion"><!--
                                         --><label for="radio1">★</label><!--
